@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <>
             <Layout title="Home">
-                <h1 className="text-3xl mt-6">Este es el home</h1>
+                <h1 className="text-3xl my-6">Este es el home</h1>
             </Layout>
         </>
     );
