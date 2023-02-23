@@ -3,7 +3,12 @@ import Image from "next/image";
 
 export default function Product({ item, showAs }) {
     if (showAs === "Page") {
-        return <div>Page producto</div>;
+        const { title, price, image, description } = item.data;
+        return (
+            <div>
+                Page producto {item.id} - {title}
+            </div>
+        );
     }
 
     if (showAs === " ListItem") {
@@ -11,12 +16,9 @@ export default function Product({ item, showAs }) {
     }
 
     return (
-        <div
-            className="bg-white rounded-md text-center shadow-sm p-4 flex flex-col justify-around items-center w-80"
-            key={item.id}
-        >
+        <div className="bg-white rounded-md text-center shadow-sm p-4 flex flex-col justify-around items-center w-80">
             <div>
-                <Link href={`/store/url-a-mi-componente`}>
+                <Link href={`/store/${item.id}`}>
                     <Image
                         src={item.image}
                         alt={item.descripcion}
@@ -27,9 +29,7 @@ export default function Product({ item, showAs }) {
             </div>
             <div>
                 <h3 className="text-xl mb-3">
-                    <Link href={`/store/url-a-mi-componente`}>
-                        {item.title}
-                    </Link>
+                    <Link href={`/store/${item.id}`}>{item.title}</Link>
                 </h3>
             </div>
             <div className="text-sm text-center pb-4">${item.price}</div>
