@@ -8,6 +8,16 @@ export default function ShoppingCart() {
     const handleCloseCart = () => {
         cart.closeCart();
     };
+
+    const getTotal = () => {
+        const total = cart.items.reduce(
+            // el reduce tiene que retornar un valor
+            (acc, item) => acc + item.quantity * item.price,
+            0
+        );
+        return total;
+    };
+
     return (
         <>
             <div
@@ -37,6 +47,7 @@ export default function ShoppingCart() {
                                 />
                             ))}
                         </div>
+                        <div>Total: ${getTotal()}</div>
                     </>
                 )}
             </div>

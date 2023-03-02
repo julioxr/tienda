@@ -32,7 +32,23 @@ export default function Product({ item, showAs, quantity }) {
     }
 
     if (showAs === "ListItem") {
-        return <div>List Item producto asd</div>;
+        return (
+            <>
+                <div className="flex gap-4 items-center p-4">
+                    <Image
+                        src={item.image}
+                        alt={item.descripcion}
+                        width={60}
+                        height={60}
+                    />
+                    <div>
+                        <div>{item.title}</div>
+                        <div>Cantidad {quantity}</div>
+                        <p>Precio: ${item.price * quantity}</p>
+                    </div>
+                </div>
+            </>
+        );
     }
 
     return (
