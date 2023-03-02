@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { convertToPath } from "@/lib/utils";
+import CartButton from "./cartButton";
 
-export default function Product({ item, showAs }) {
+export default function Product({ item, showAs, quantity }) {
     if (showAs === "Page") {
         const { title, price, image, descripcion } = item.data;
         return (
@@ -23,15 +24,15 @@ export default function Product({ item, showAs }) {
                     <div>{price}</div>
                     <div>{descripcion}</div>
                     <div>
-                        <button>Add to cart</button>
+                        <CartButton item={item} />
                     </div>
                 </div>
             </div>
         );
     }
 
-    if (showAs === " ListItem") {
-        return <div>List Item producto</div>;
+    if (showAs === "ListItem") {
+        return <div>List Item producto asd</div>;
     }
 
     return (
@@ -55,9 +56,7 @@ export default function Product({ item, showAs }) {
             </div>
             <div className="text-sm text-center pb-4">${item.price}</div>
             <div>
-                <button className="bg-slate-500 rounded-full w-28 text-white h-8 ">
-                    Add to cart
-                </button>
+                <CartButton item={item} />
             </div>
         </div>
     );

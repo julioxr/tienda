@@ -1,12 +1,13 @@
 import { createContext, useState, useContext } from "react";
+import ShoppingCart from "./shoppingCart";
 
 const AppContext = createContext({
     isOpen: false,
     items: [],
     openCart: () => {},
     closeCart: () => {},
-    addItemToCart: () => {},
-    getNumerOfItems: () => {},
+    addItemToCart: (item) => {},
+    getNumberOfItems: () => {},
 });
 
 export default function StateWrapper({ children }) {
@@ -53,6 +54,7 @@ export default function StateWrapper({ children }) {
             }}
         >
             {children}
+            <ShoppingCart />
         </AppContext.Provider>
     );
 }

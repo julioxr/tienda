@@ -1,6 +1,13 @@
 import Link from "next/link";
+import { useAppContext } from "./stateWrapper";
 
 export default function Menu() {
+    const cart = useAppContext();
+
+    const handleOpenCart = () => {
+        cart.openCart();
+    };
+
     return (
         <nav className="flex justify-around bg-blue-300 h-10 shadow-md items-center text-white">
             <div className="flex gap-10 font-semibold bg-transparent">
@@ -15,8 +22,8 @@ export default function Menu() {
                 </Link>
             </div>
             <div className="bg-transparent">
-                <a href="#" className="bg-transparent">
-                    Cart (0)
+                <a href="#" className="bg-transparent" onClick={handleOpenCart}>
+                    Cart ({cart.getNumberOfItems()})
                 </a>
             </div>
         </nav>
