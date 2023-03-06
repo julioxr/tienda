@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./footer";
 import Menu from "./menu";
 
 export const Layout = ({ children, title }) => {
@@ -18,6 +19,7 @@ export const Layout = ({ children, title }) => {
             </Head>
             <Menu />
             <section className="container mx-auto">{children}</section>
+            <Footer />
         </>
     );
 };
