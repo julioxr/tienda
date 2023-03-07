@@ -2,9 +2,9 @@ import { BsCreditCard, BsBoxSeam, BsShieldCheck } from "react-icons/bs";
 
 export default function Info() {
     return (
-        <section className="flex h-auto m-20 gap-20 justify-center">
+        <section className="flex h-auto m-32 gap-20 justify-center">
             <div className="flex flex-col justify-center items-center max-w-xs text-center">
-                <BsCreditCard className="text-6xl mb-2 text-gray-700" />
+                <BsCreditCard className="text-6xl mb-4 text-gray-700" />
                 <h3 className="text-lg text-gray-800 font-medium">
                     Elegi como pagar
                 </h3>
@@ -15,7 +15,7 @@ export default function Info() {
             </div>
             <div className="border-l-gray-300 border"></div>
             <div className="flex flex-col justify-center items-center max-w-xs text-center">
-                <BsBoxSeam className="text-6xl mb-2 text-gray-700" />
+                <BsBoxSeam className="text-6xl mb-4 text-gray-700" />
                 <h3 className="text-lg text-gray-800 font-medium">
                     Envío gratis desde $ 8.000
                 </h3>
@@ -27,7 +27,7 @@ export default function Info() {
             </div>
             <div className="border-l-gray-300 border"></div>
             <div className="flex flex-col justify-center items-center max-w-xs text-center">
-                <BsShieldCheck className="text-6xl mb-2 text-gray-700" />
+                <BsShieldCheck className="text-6xl mb-4 text-gray-700" />
                 <h3 className="text-lg text-gray-800 font-medium">
                     Seguridad, de principio a fin
                 </h3>

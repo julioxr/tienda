@@ -42,5 +42,29 @@ export default function handler(req, res) {
             descripcion:
                 "Este bolso de cuero es espacioso y elegante, perfecto para llevar todo lo que necesites.",
         },
+        {
+            id: 6,
+            title: "Bolso de cuero",
+            price: 2500,
+            image: "http://localhost:3000/img/image-5.webp",
+            descripcion:
+                "Este bolso de cuero es espacioso y elegante, perfecto para llevar todo lo que necesites.",
+        },
+        {
+            id: 7,
+            title: "Bolso de cuero",
+            price: 2500,
+            image: "http://localhost:3000/img/image-5.webp",
+            descripcion:
+                "Este bolso de cuero es espacioso y elegante, perfecto para llevar todo lo que necesites.",
+        },
+        {
+            id: 8,
+            title: "Bolso de cuero",
+            price: 2500,
+            image: "http://localhost:3000/img/image-5.webp",
+            descripcion:
+                "Este bolso de cuero es espacioso y elegante, perfecto para llevar todo lo que necesites.",
+        },
     ]);
 }

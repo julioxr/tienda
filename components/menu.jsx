@@ -15,7 +15,9 @@ export default function Menu() {
             <div className="absolute shadow-sm w-full h-20 -z-10"></div>
             <nav className="flex justify-between h-20 items-center container mx-auto">
                 <div>
-                    <h2 className="text-2xl font-extrabold">T I E N D A</h2>
+                    <Link href="/">
+                        <h2 className="text-2xl font-extrabold">T I E N D A</h2>
+                    </Link>
                 </div>
                 <div className="flex gap-20">
                     <div className="flex font-semibold bg-transparent gap-6">

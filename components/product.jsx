@@ -7,7 +7,7 @@ export default function Product({ item, showAs, quantity }) {
     if (showAs === "Page") {
         const { title, price, image, descripcion } = item.data;
         return (
-            <div className="h-[calc(100vh-184px)]">
+            <div className="h-[calc(100vh-256px)]">
                 <div className="flex bg-white justify-center items-center mt-12 max-w-4xl mx-auto">
                     <div>
                         <Image
