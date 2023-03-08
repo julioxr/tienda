@@ -3,8 +3,10 @@ import Image from "next/image";
 import { BsTrash3 } from "react-icons/bs";
 import { convertToPath } from "@/lib/utils";
 import CartButton from "./cartButton";
+import { useAppContext } from "./stateWrapper";
 
-export default function Product({ item, showAs, quantity }) {
+export default function Product({ item, showAs }) {
+    const cart = useAppContext();
     if (showAs === "Page") {
         return (
             <div className="h-[calc(100vh-328px)]">
@@ -55,7 +57,10 @@ export default function Product({ item, showAs, quantity }) {
                             </span>
                         </p>
                         <div className="absolute top-4 right-3 text-lg text-gray-700">
-                            <BsTrash3 />
+                            {/* FUNCION PARA ELIMINAR DE LA LISTA */}
+                            <BsTrash3
+                                onClick={() => cart.filterItems(item.id)}
+                            />
                         </div>
                     </div>
                 </div>

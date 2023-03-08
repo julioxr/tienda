@@ -8,6 +8,7 @@ const AppContext = createContext({
     closeCart: () => {},
     addItemToCart: (item) => {},
     getNumberOfItems: () => {},
+    filterItems: () => {},
 });
 
 export default function StateWrapper({ children }) {
@@ -42,6 +43,12 @@ export default function StateWrapper({ children }) {
         return total;
     };
 
+    const handleFilterItems = (id) => {
+        const res = items.filter((item) => item.id !== id);
+        setItems(res);
+        console.log(items);
+    };
+
     return (
         <AppContext.Provider
             value={{
@@ -51,6 +58,7 @@ export default function StateWrapper({ children }) {
                 closeCart: handleCloseCart,
                 addItemToCart: handleAddItemToCart,
                 getNumberOfItems: handleNumberOfItems,
+                filterItems: handleFilterItems,
             }}
         >
             {children}
