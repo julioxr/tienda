@@ -6,14 +6,13 @@ import CartButton from "./cartButton";
 
 export default function Product({ item, showAs, quantity }) {
     if (showAs === "Page") {
-        const { title, price, image, descripcion } = item.data;
         return (
-            <div className="h-[calc(100vh-256px)]">
+            <div className="h-[calc(100vh-328px)]">
                 <div className="flex bg-white justify-center items-center mt-12 max-w-4xl mx-auto">
                     <div>
                         <Image
-                            src={image}
-                            alt={descripcion}
+                            src={item.image}
+                            alt={item.descripcion}
                             width={600}
                             height={600}
                         />
@@ -21,10 +20,10 @@ export default function Product({ item, showAs, quantity }) {
 
                     <div className="flex flex-col gap-4">
                         <div>
-                            <h2 className="text-3xl font-bold">{title}</h2>
+                            <h2 className="text-3xl font-bold">{item.title}</h2>
                         </div>
-                        <div>{price}</div>
-                        <div>{descripcion}</div>
+                        <div>{item.price}</div>
+                        <div>{item.descripcion}</div>
                         <div>
                             <CartButton item={item} />
                         </div>
@@ -48,11 +47,11 @@ export default function Product({ item, showAs, quantity }) {
                         <div className="font-medium text-gray-700">
                             {item.title}
                         </div>
-                        <div>Cantidad: {quantity}</div>
+                        <div>Cantidad: {item.quantity}</div>
                         <p className="text-right ">
                             Precio:{" "}
                             <span className="font-semibold">
-                                ${item.price * quantity}
+                                ${item.price * item.quantity}
                             </span>
                         </p>
                         <div className="absolute top-4 right-3 text-lg text-gray-700">
