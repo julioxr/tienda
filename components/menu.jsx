@@ -21,24 +21,35 @@ export default function Menu() {
                 </div>
                 <div className="flex gap-20">
                     <div className="flex font-semibold bg-transparent gap-6">
-                        <Link href="/" className="bg-transparent">
+                        <Link
+                            href="/"
+                            className="hover:underline decoration-[3px] decoration-pink-500"
+                        >
                             Home
                         </Link>
-                        <Link href="/store" className="bg-transparent">
+                        <Link
+                            href="/store"
+                            className="hover:underline decoration-[3px] decoration-pink-500"
+                        >
                             Store
                         </Link>
-                        <Link href="/faq" className="bg-transparent">
+                        <Link
+                            href="/faq"
+                            className="hover:underline decoration-[3px] decoration-pink-500"
+                        >
                             FAQ
                         </Link>
                     </div>
                     <div className="bg-transparent">
                         <a
                             href="#"
-                            className="bg-transparent flex justify-center items-center gap-2"
+                            className="bg-transparent flex justify-center items-center"
                             onClick={handleOpenCart}
                         >
-                            <BsCart2 className="text-xl" /> (
-                            {cart.getNumberOfItems()})
+                            <BsCart2 className="text-xl" />
+                            <span className="bg-red-500 rounded-full text-white flex justify-center items-center h-5 w-5 text-[0.6rem] -mt-6">
+                                {cart.getNumberOfItems()}
+                            </span>
                         </a>
                     </div>
                 </div>

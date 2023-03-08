@@ -1,4 +1,5 @@
 import Product from "./product";
+import { BsXLg } from "react-icons/bs";
 import { useAppContext } from "./stateWrapper";
 
 export default function ShoppingCart() {
@@ -21,13 +22,13 @@ export default function ShoppingCart() {
     return (
         <>
             <div
-                className={`fixed top-0 bottom-0 w-72 bg-slate-400 ${openStyle}`}
+                className={`fixed top-0 bottom-0 px-10 bg-[#efefef] shadow-2xl shadow-gray-500 ${openStyle}`}
             >
                 <button
-                    className="bg-slate-800 rounded-full w-28 text-white h-8 mx-4"
+                    className="text-2xl mt-8 flex justify-end w-full"
                     onClick={handleCloseCart}
                 >
-                    Close
+                    <BsXLg />
                 </button>
 
                 {cart.items.length === 0 ? (
@@ -35,20 +36,42 @@ export default function ShoppingCart() {
                         <p>Cart is empty</p>
                     </div>
                 ) : (
-                    <>
-                        <h3>Your items</h3>
-                        <div>
-                            {cart.items.map((item) => (
-                                <Product
-                                    key={item.id}
-                                    item={item}
-                                    showAs="ListItem"
-                                    quantity={item.quantity}
-                                />
-                            ))}
+                    <div className="w-[364px]">
+                        {/* Items de card en carrito */}
+                        <h3 className="font-bold mt-8 text-xl">Your items</h3>
+                        <div className="overflow-y-scroll h-[calc(100vh-172px)]">
+                            <div className="flex flex-col gap-4 mt-4">
+                                {cart.items.map((item) => (
+                                    <Product
+                                        key={item.id}
+                                        item={item}
+                                        showAs="ListItem"
+                                        quantity={item.quantity}
+                                    />
+                                ))}
+                            </div>
                         </div>
-                        <div>Total: ${getTotal()}</div>
-                    </>
+                        {/* Total con botones */}
+                        <div className="absolute bottom-10 bg-[#efefef]">
+                            <div className="border-b-2 border-gray-300 opacity-70 w-full mt-12 mb-6"></div>
+                            <div className="">
+                                <div className="text-2xl font-bold mb-6 text-right">
+                                    Total: ${getTotal()}
+                                </div>
+                                <div className="flex gap-4">
+                                    <button
+                                        className="border border-slate-800 rounded-full px-4 py-2"
+                                        onClick={handleCloseCart}
+                                    >
+                                        Agregar mas productos
+                                    </button>
+                                    <button className="bg-slate-800 rounded-full px-4 py-2 text-white">
+                                        Finalizar compra
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 )}
             </div>
         </>

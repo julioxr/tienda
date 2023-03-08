@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { BsTrash3 } from "react-icons/bs";
 import { convertToPath } from "@/lib/utils";
 import CartButton from "./cartButton";
 
@@ -36,17 +37,27 @@ export default function Product({ item, showAs, quantity }) {
     if (showAs === "ListItem") {
         return (
             <>
-                <div className="flex gap-4 items-center p-4">
+                <div className="flex gap-4 items-center p-4 bg-white rounded-md relative text-gray-500">
                     <Image
                         src={item.image}
                         alt={item.descripcion}
-                        width={60}
-                        height={60}
+                        width={70}
+                        height={70}
                     />
-                    <div>
-                        <div>{item.title}</div>
-                        <div>Cantidad {quantity}</div>
-                        <p>Precio: ${item.price * quantity}</p>
+                    <div className="w-full">
+                        <div className="font-medium text-gray-700">
+                            {item.title}
+                        </div>
+                        <div>Cantidad: {quantity}</div>
+                        <p className="text-right ">
+                            Precio:{" "}
+                            <span className="font-semibold">
+                                ${item.price * quantity}
+                            </span>
+                        </p>
+                        <div className="absolute top-4 right-3 text-lg text-gray-700">
+                            <BsTrash3 />
+                        </div>
                     </div>
                 </div>
             </>
