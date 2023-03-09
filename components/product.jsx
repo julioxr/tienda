@@ -56,7 +56,7 @@ export default function Product({ item, showAs }) {
                                 ${item.price * item.quantity}
                             </span>
                         </p>
-                        <div className="absolute top-4 right-3 text-lg text-gray-700">
+                        <div className="absolute top-4 right-3 text-lg text-gray-700 cursor-pointer">
                             {/* FUNCION PARA ELIMINAR DE LA LISTA */}
                             <BsTrash3
                                 onClick={() => cart.filterItems(item.id)}

@@ -22,7 +22,7 @@ export default function ShoppingCart() {
     return (
         <>
             <div
-                className={`fixed top-0 bottom-0 px-10 bg-[#efefef] shadow-2xl shadow-gray-500 ${openStyle}`}
+                className={`fixed top-0 bottom-0 z-20 px-10 bg-[#efefef] shadow-2xl shadow-gray-500 ${openStyle}`}
             >
                 <button
                     className="text-2xl mt-8 flex justify-end w-full"
