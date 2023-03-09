@@ -22,11 +22,17 @@ export default function Product({ item, showAs }) {
 
                     <div className="flex flex-col gap-4">
                         <div>
-                            <h2 className="text-3xl font-bold">{item.title}</h2>
+                            <h2 className="text-3xl font-bold text-gray-700">
+                                {item.title}
+                            </h2>
                         </div>
-                        <div>{item.price}</div>
-                        <div>{item.descripcion}</div>
-                        <div>
+                        <div className="text-lg text-gray-400 font-semibold -mt-3">
+                            ${item.price}
+                        </div>
+                        <div className="w-3/4 text-gray-500">
+                            {item.descripcion}
+                        </div>
+                        <div className="mt-8">
                             <CartButton item={item} />
                         </div>
                     </div>

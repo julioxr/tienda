@@ -5,6 +5,7 @@ import { useAppContext } from "./stateWrapper";
 export default function ShoppingCart() {
     const cart = useAppContext();
     const openStyle = cart.isOpen ? "right-0" : "right-full";
+    const isHide = cart.isOpen ? "block" : "hidden";
 
     const handleCloseCart = () => {
         cart.closeCart();
@@ -22,7 +23,7 @@ export default function ShoppingCart() {
     return (
         <>
             <div
-                className={`fixed top-0 bottom-0 z-20 px-10 bg-[#efefef] shadow-2xl shadow-gray-500 ${openStyle}`}
+                className={`fixed top-0 bottom-0 z-20 px-10 bg-[#efefef] shadow-2xl shadow-gray-500 ${openStyle} ${isHide}`}
             >
                 <button
                     className="text-2xl mt-8 flex justify-end w-full"
