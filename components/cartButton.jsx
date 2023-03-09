@@ -6,6 +6,7 @@ export default function CartButton({ item }) {
     function handleClick() {
         cart.addItemToCart(item);
         cart.openCart();
+        console.log("Funcionas");
     }
 
     return (

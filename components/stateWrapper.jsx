@@ -59,6 +59,7 @@ export default function StateWrapper({ children }) {
                 addItemToCart: handleAddItemToCart,
                 getNumberOfItems: handleNumberOfItems,
                 filterItems: handleFilterItems,
+                setItems,
             }}
         >
             {children}

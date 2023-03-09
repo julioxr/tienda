@@ -7,6 +7,12 @@ import { useAppContext } from "./stateWrapper";
 
 export default function Product({ item, showAs }) {
     const cart = useAppContext();
+    const handleQuantity = (e, item) => {
+        const copy = [...cart.items];
+        e.textContent === "-" ? item.quantity-- : item.quantity++;
+        cart.setItems(copy);
+    };
+
     if (showAs === "Page") {
         return (
             <div className="h-[calc(100vh-328px)]">
@@ -56,6 +62,20 @@ export default function Product({ item, showAs }) {
                             {item.title}
                         </div>
                         <div>Cantidad: {item.quantity}</div>
+                        <div className="flex gap-2 font-bold text-3xl text-gray-700">
+                            <button
+                                className="w-8"
+                                onClick={(e) => handleQuantity(e.target, item)}
+                            >
+                                -
+                            </button>
+                            <button
+                                className="w-8"
+                                onClick={(e) => handleQuantity(e.target, item)}
+                            >
+                                +
+                            </button>
+                        </div>
                         <p className="text-right ">
                             Precio:{" "}
                             <span className="font-semibold">
