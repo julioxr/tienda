@@ -33,7 +33,7 @@ export default function ShoppingCart() {
                 </button>
 
                 {cart.items.length === 0 ? (
-                    <div className="flex justify-center items-center h-full">
+                    <div className="flex justify-center items-center h-full w-[364px]">
                         <p>Cart is empty</p>
                     </div>
                 ) : (

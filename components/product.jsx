@@ -7,9 +7,28 @@ import { useAppContext } from "./stateWrapper";
 
 export default function Product({ item, showAs }) {
     const cart = useAppContext();
+
+    const priceFormatter = () => {
+        const price = item.price; // number 13000
+        const priceWithDot = price.toLocaleString("es-US").replace(",", "."); // string 13.000
+        return priceWithDot;
+    };
+
+    const price = priceFormatter();
+
     const handleQuantity = (e, item) => {
         const copy = [...cart.items];
-        e.textContent === "-" ? item.quantity-- : item.quantity++;
+
+        if (e.textContent === "-") {
+            if (item.quantity === 0) {
+                console.log("no se puede restar");
+            } else {
+                item.quantity--;
+            }
+        } else {
+            item.quantity++;
+        }
+
         cart.setItems(copy);
     };
 
@@ -33,7 +52,7 @@ export default function Product({ item, showAs }) {
                             </h2>
                         </div>
                         <div className="text-lg text-gray-400 font-semibold -mt-3">
-                            ${item.price}
+                            ${price}
                         </div>
                         <div className="w-3/4 text-gray-500">
                             {item.descripcion}
@@ -79,7 +98,10 @@ export default function Product({ item, showAs }) {
                         <p className="text-right ">
                             Precio:{" "}
                             <span className="font-semibold">
-                                ${item.price * item.quantity}
+                                $
+                                {parseFloat(
+                                    priceFormatter() * item.quantity // convierte el string en number para poder multiplicar y luego agrego 3 decimales
+                                ).toFixed(3)}
                             </span>
                         </p>
                         <div className="absolute top-4 right-3 text-lg text-gray-700 cursor-pointer">
@@ -114,7 +136,7 @@ export default function Product({ item, showAs }) {
                 </h3>
             </div>
             <div className="text-center text-lg text-gray-400 font-medium mb-4">
-                ${item.price}
+                ${price}
             </div>
             <div>
                 <CartButton item={item} />
