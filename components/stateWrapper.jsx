@@ -39,14 +39,19 @@ export default function StateWrapper({ children }) {
 
     const handleNumberOfItems = () => {
         const total = items.reduce((acc, item) => acc + item.quantity, 0);
-
         return total;
     };
 
     const handleFilterItems = (id) => {
         const res = items.filter((item) => item.id !== id);
         setItems(res);
-        console.log(items);
+    };
+
+    const priceFormatter = (item) => {
+        const price = item.price; // number 13000
+        const priceWithDot = price.toLocaleString("es-US").replace(",", "."); // string 13.000
+        console.log(priceWithDot);
+        return priceWithDot;
     };
 
     return (
@@ -60,6 +65,7 @@ export default function StateWrapper({ children }) {
                 getNumberOfItems: handleNumberOfItems,
                 filterItems: handleFilterItems,
                 setItems,
+                priceFormatter,
             }}
         >
             {children}

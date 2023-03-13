@@ -1,31 +1,36 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { BsTrash3 } from "react-icons/bs";
+import { MdRemove, MdAdd } from "react-icons/md";
 import { convertToPath } from "@/lib/utils";
 import CartButton from "./cartButton";
+import ErrorMessage from "./errorMessage";
 import { useAppContext } from "./stateWrapper";
 
-export default function Product({ item, showAs }) {
+export default function Product({ item, showAs, priceFormatter }) {
     const cart = useAppContext();
+    const [error, setError] = useState(false);
+    const disabled =
+        item.quantity == 1 ? "text-gray-300 pointer-events-none" : "";
 
-    const priceFormatter = () => {
-        const price = item.price; // number 13000
-        const priceWithDot = price.toLocaleString("es-US").replace(",", "."); // string 13.000
-        return priceWithDot;
-    };
-
-    const price = priceFormatter();
+    const price = cart.priceFormatter(item);
 
     const handleQuantity = (e, item) => {
         const copy = [...cart.items];
+        console.log(e.id);
 
-        if (e.textContent === "-") {
-            if (item.quantity === 0) {
-                console.log("no se puede restar");
+        if (e.id === "remove") {
+            if (item.quantity <= 1) {
+                setError(true);
+                setTimeout(() => {
+                    setError(false);
+                }, 3000);
             } else {
                 item.quantity--;
             }
-        } else {
+        } else if (e.id === "add") {
+            setError(false);
             item.quantity++;
         }
 
@@ -77,38 +82,46 @@ export default function Product({ item, showAs }) {
                         height={70}
                     />
                     <div className="w-full">
-                        <div className="font-medium text-gray-700">
+                        <div className="font-medium text-lg text-gray-700">
                             {item.title}
                         </div>
-                        <div>Cantidad: {item.quantity}</div>
-                        <div className="flex gap-2 font-bold text-3xl text-gray-700">
+                        <div className="pb-1">Cantidad:</div>
+                        <div className="flex gap-2 text-xl text-gray-600">
                             <button
-                                className="w-8"
+                                id="remove"
+                                className={`flex justify-start items-center bg-gray-100 rounded ${disabled}`}
                                 onClick={(e) => handleQuantity(e.target, item)}
                             >
-                                -
+                                <MdRemove />
                             </button>
+                            <span className="flex justify-center items-center text-base font-medium">
+                                {item.quantity}
+                            </span>
                             <button
-                                className="w-8"
+                                id="add"
+                                className="flex justify-center items-center bg-gray-100 rounded"
                                 onClick={(e) => handleQuantity(e.target, item)}
                             >
-                                +
+                                <MdAdd />
                             </button>
                         </div>
+                        {/* Mensaje de error */}
+                        {error && <ErrorMessage />}
                         <p className="text-right ">
                             Precio:{" "}
                             <span className="font-semibold">
                                 $
                                 {parseFloat(
-                                    priceFormatter() * item.quantity // convierte el string en number para poder multiplicar y luego agrego 3 decimales
+                                    cart.priceFormatter() * item.quantity // convierte el string en number para poder multiplicar y luego agrego 3 decimales
                                 ).toFixed(3)}
                             </span>
                         </p>
-                        <div className="absolute top-4 right-3 text-lg text-gray-700 cursor-pointer">
+                        <div
+                            className="absolute top-4 right-3 text-lg text-gray-700 cursor-pointer"
+                            onClick={() => cart.filterItems(item.id)}
+                        >
                             {/* FUNCION PARA ELIMINAR DE LA LISTA */}
-                            <BsTrash3
-                                onClick={() => cart.filterItems(item.id)}
-                            />
+                            <BsTrash3 />
                         </div>
                     </div>
                 </div>

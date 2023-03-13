@@ -14,7 +14,6 @@ export default function ProductPage({ productInfo }) {
 
 export async function getStaticPaths() {
     const paths = await getPathsFromIds();
-    console.log(paths);
     return {
         paths: paths,
         fallback: false,
