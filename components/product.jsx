@@ -202,7 +202,7 @@ export default function Product({ item, showAs, priceFormatter }) {
             <div className="text-center text-lg text-gray-400 font-medium -mt-1 mb-4">
                 ${price}
             </div>
-            <div>
+            <div className="mb-4">
                 <CartButton item={item} />
             </div>
         </div>
