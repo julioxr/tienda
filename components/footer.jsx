@@ -7,13 +7,13 @@ export default function Footer() {
             <section className="bg-gray-800 text-white flex flex-col justify-center items-center py-10 gap-8">
                 <div className="flex justify-center gap-60">
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-bold text-xl">Atención</h4>
+                        <h4 className="font-bold text-xl">Attention</h4>
                         <div className="flex gap-6 text-base font-thin">
                             <Link href="/" className="">
-                                Ayuda
+                                Help
                             </Link>
                             <Link href="/" className="">
-                                Comunidad
+                                Community
                             </Link>
                             <Link href="/" className="">
                                 Status
@@ -21,7 +21,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-bold text-xl">Seguinos</h4>
+                        <h4 className="font-bold text-xl">Follow us</h4>
                         <div className="flex gap-4 text-xl">
                             <Link href="/" className="">
                                 <BsInstagram />
@@ -39,7 +39,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="font-light text-sm text-center">
-                    <p>© 2021 Tienda. Todos los derechos reservados.</p>
+                    <p>© 2021 Tienda. All rights reserved.</p>
                     {/* <p>
                         Términos y condiciones. Políticas de privacidad.
                         Política de calidad.

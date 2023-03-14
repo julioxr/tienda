@@ -7,6 +7,7 @@ import { convertToPath } from "@/lib/utils";
 import CartButton from "./cartButton";
 import ErrorMessage from "./errorMessage";
 import { useAppContext } from "./stateWrapper";
+import Table from "./table";
 
 export default function Product({ item, showAs, priceFormatter }) {
     const cart = useAppContext();
@@ -39,18 +40,26 @@ export default function Product({ item, showAs, priceFormatter }) {
 
     if (showAs === "Page") {
         return (
-            <div className="h-[calc(100vh-328px)]">
-                <div className="flex bg-white justify-center items-center mt-12 max-w-4xl mx-auto">
-                    <div>
+            // <div className="h-[calc(100vh-328px)]">
+            <div className="h-full">
+                <h1 className="text-base font-bold my-6">
+                    STORE{" "}
+                    <span className="text-base font-thin">
+                        / {`${item.title}`}
+                    </span>
+                </h1>
+                <div className="flex gap-x-12 bg-white justify-center items-center mt-12 w-[1000px] mx-auto rounded-md shadow-xl">
+                    <div className="p-4">
                         <Image
                             src={item.image}
                             alt={item.descripcion}
                             width={600}
                             height={600}
+                            className="rounded-md"
                         />
                     </div>
 
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 pr-4">
                         <div>
                             <h2 className="text-3xl font-bold text-gray-700">
                                 {item.title}
@@ -67,6 +76,47 @@ export default function Product({ item, showAs, priceFormatter }) {
                         </div>
                     </div>
                 </div>
+                {/* Aca probar agregar minicards */}
+                <div className="flex gap-8 justify-center p-14 items-center">
+                    <div className="w-40 h-40 flex justify-center items-center m-2">
+                        <Image
+                            src={item.image}
+                            alt={item.descripcion}
+                            width={600}
+                            height={600}
+                            className="rounded-md"
+                        />
+                    </div>
+                    <div className="w-40 h-40 flex justify-center items-center">
+                        <Image
+                            src={item.image}
+                            alt={item.descripcion}
+                            width={600}
+                            height={600}
+                            className="rounded-md"
+                        />
+                    </div>
+                    <div className="w-40 h-40 flex justify-center items-center">
+                        <Image
+                            src={item.image}
+                            alt={item.descripcion}
+                            width={600}
+                            height={600}
+                            className="rounded-md"
+                        />
+                    </div>
+                    <div className="w-40 h-40 flex justify-center items-center">
+                        <Image
+                            src={item.image}
+                            alt={item.descripcion}
+                            width={600}
+                            height={600}
+                            className="rounded-md"
+                        />
+                    </div>
+                </div>
+                {/* Aca va la tabla*/}
+                <Table />
             </div>
         );
     }
@@ -112,7 +162,7 @@ export default function Product({ item, showAs, priceFormatter }) {
                             <span className="font-semibold">
                                 $
                                 {parseFloat(
-                                    cart.priceFormatter() * item.quantity // convierte el string en number para poder multiplicar y luego agrego 3 decimales
+                                    cart.priceFormatter(item) * item.quantity // convierte el string en number para poder multiplicar y luego agrego 3 decimales
                                 ).toFixed(3)}
                             </span>
                         </p>
@@ -130,7 +180,7 @@ export default function Product({ item, showAs, priceFormatter }) {
     }
 
     return (
-        <div className="bg-white rounded-md text-center shadow-sm p-4 flex flex-col justify-around items-center w-80">
+        <div className="bg-white rounded-md text-center shadow-xl p-4 gap-2 flex flex-col justify-around items-center w-80">
             <div>
                 <Link href={`/store/${convertToPath(item.title)}`}>
                     <Image
@@ -138,17 +188,18 @@ export default function Product({ item, showAs, priceFormatter }) {
                         alt={item.descripcion}
                         width={500}
                         height={500}
+                        className="rounded-md"
                     />
                 </Link>
             </div>
             <div>
-                <h3 className="text-xl font-semibold text-gray-700">
+                <h3 className="text-xl font-semibold text-gray-700 -mt-1">
                     <Link href={`/store/${convertToPath(item.title)}`}>
                         {item.title}
                     </Link>
                 </h3>
             </div>
-            <div className="text-center text-lg text-gray-400 font-medium mb-4">
+            <div className="text-center text-lg text-gray-400 font-medium -mt-1 mb-4">
                 ${price}
             </div>
             <div>

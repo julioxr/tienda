@@ -14,13 +14,12 @@ export default function Home({ items }) {
                     <div className="bg-black opacity-40 h-[500px]">
                         <div className="w-2/3 lg:w-1/2 p-12 text-white">
                             <h2 className="text-6xl font-bold mb-6">
-                                Shop the Summer 2023 Collection
+                                Discover the Latest Tech Collection
                             </h2>
                             <p className="lg:w-2/3">
-                                Level up your comfort this season with our new
-                                Winter Collection, all new joggers, beanies,
-                                drinware, and for the first time ever,
-                                Octocookie cutters!
+                                Upgrade your digital lifestyle today with our
+                                latest collection of cutting-edge tech devices
+                                designed to keep you connected on-the-go.
                             </p>
                         </div>
                     </div>

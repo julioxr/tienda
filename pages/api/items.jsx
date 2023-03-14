@@ -4,67 +4,99 @@ export default function handler(req, res) {
     res.status(200).json([
         {
             id: 1,
-            title: "Zapatos deportivos",
+            title: "Blue microphone",
             price: 3200,
-            image: "http://localhost:3000/img/image-1.webp",
+            image: "http://localhost:3000/img/1.jpg",
             descripcion:
-                "Estos zapatos deportivos son cómodos y perfectos para entrenar.",
+                "Professional microphone with high sensitivity and sound quality for recording and live streaming.",
         },
         {
             id: 2,
-            title: "Camiseta de algodón",
+            title: "Sony Headphones",
             price: 12350,
-            image: "http://localhost:3000/img/image-2.webp",
+            image: "http://localhost:3000/img/2.jpg",
             descripcion:
-                "Esta camiseta de algodón es suave y cómoda, perfecta para el día a día.",
+                "Sony headphones with noise-canceling technology and exceptional sound quality for an immersive audio experience.",
         },
         {
             id: 3,
-            title: "Pantalones de mezclilla",
+            title: "Canon lens",
             price: 18120,
-            image: "http://localhost:3000/img/image-3.webp",
+            image: "http://localhost:3000/img/3.jpg",
             descripcion:
-                "Estos pantalones de mezclilla son duraderos y perfectos para cualquier ocasión.",
+                "Canon camera lens with fast autofocus and sharp, detailed image quality for professional photography.",
         },
         {
             id: 4,
-            title: "Reloj de cuarzo",
+            title: "Watch Casio",
             price: 47950,
-            image: "http://localhost:3000/img/image-4.webp",
+            image: "http://localhost:3000/img/4.jpg",
             descripcion:
-                "Este reloj de cuarzo es elegante y funcional, perfecto para cualquier ocasión.",
+                "Casio watch with stylish design and features such as stopwatch, alarm, and water resistance for daily and sports use.",
         },
         {
             id: 5,
-            title: "Bolso de cuero",
+            title: "Xiaomi red dot",
             price: 2530,
-            image: "http://localhost:3000/img/image-5.webp",
+            image: "http://localhost:3000/img/5.jpg",
             descripcion:
-                "Este bolso de cuero es espacioso y elegante, perfecto para llevar todo lo que necesites.",
+                "Xiaomi wireless earbuds with stable Bluetooth connection, intuitive touch control, and high-fidelity sound for enjoying music anywhere.",
         },
         {
             id: 6,
-            title: "Bolso de cuero",
+            title: "Wallet",
             price: 2500,
-            image: "http://localhost:3000/img/image-5.webp",
+            image: "http://localhost:3000/img/6.jpg",
             descripcion:
-                "Este bolso de cuero es espacioso y elegante, perfecto para llevar todo lo que necesites.",
+                "Leather wallet with multiple compartments for cards and bills, stylish design, and durability for daily use.",
         },
         {
             id: 7,
-            title: "Bolso de cuero",
+            title: "Ligther",
             price: 2500,
-            image: "http://localhost:3000/img/image-5.webp",
+            image: "http://localhost:3000/img/7.jpg",
             descripcion:
-                "Este bolso de cuero es espacioso y elegante, perfecto para llevar todo lo que necesites.",
+                "High-quality rechargeable lighter with stylish design, adjustable flame, and reliability for long-lasting use.",
         },
         {
             id: 8,
-            title: "Bolso de cuero",
+            title: "Notebook",
             price: 2500,
-            image: "http://localhost:3000/img/image-5.webp",
+            image: "http://localhost:3000/img/8.jpg",
             descripcion:
-                "Este bolso de cuero es espacioso y elegante, perfecto para llevar todo lo que necesites.",
+                "Notebook with high-quality paper, durable cover, and convenient size for daily use and creative inspiration.",
+        },
+        {
+            id: 9,
+            title: "Luxury cup",
+            price: 2500,
+            image: "http://localhost:3000/img/9.jpg",
+            descripcion:
+                "High-quality ceramic mug with ergonomic handle and vibrant design for a cozy and stylish drinking experience.",
+        },
+        {
+            id: 10,
+            title: "Red drone",
+            price: 2500,
+            image: "http://localhost:3000/img/10.jpg",
+            descripcion:
+                "Red drone with advanced camera technology, long battery life, and stable flight control for capturing stunning aerial footage.",
+        },
+        {
+            id: 11,
+            title: "Picks Rombo",
+            price: 2500,
+            image: "http://localhost:3000/img/11.jpg",
+            descripcion:
+                "Guitar picks with premium materials and various thicknesses for optimal tone and precision during playing sessions.",
+        },
+        {
+            id: 12,
+            title: "Canon Mark iii",
+            price: 2500,
+            image: "http://localhost:3000/img/12.jpg",
+            descripcion:
+                "Canon Mark III camera with full-frame sensor, advanced autofocus system, and high-speed continuous shooting for professional-grade photography.",
         },
     ]);
 }
