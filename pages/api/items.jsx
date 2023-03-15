@@ -4,7 +4,7 @@ export function getTestItems() {
             id: 1,
             title: "Blue microphone",
             price: 3200,
-            image: "http://localhost:3000/img/1.jpg",
+            image: "/public/img/1.jpg",
             descripcion:
                 "Professional microphone with high sensitivity and sound quality for recording and live streaming.",
         },

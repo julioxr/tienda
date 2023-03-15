@@ -1,6 +1,8 @@
 import Product from "./product";
+import Image from "next/image";
 import { BsXLg } from "react-icons/bs";
 import { useAppContext } from "./stateWrapper";
+import carrito from "../public/carrito.svg";
 
 export default function ShoppingCart() {
     const cart = useAppContext();
@@ -33,7 +35,13 @@ export default function ShoppingCart() {
                 </button>
 
                 {cart.items.length === 0 ? (
-                    <div className="flex justify-center items-center h-full w-[364px]">
+                    <div className="flex flex-col gap-12 justify-center items-center h-[calc(100vh-150px)] w-[364px]">
+                        <Image
+                            src={carrito}
+                            alt="Carrito"
+                            width={300}
+                            height={300}
+                        />
                         <p className="font-bold text-gray-700 text-xl -mt-6">
                             Cart is empty
                         </p>
