@@ -1,7 +1,5 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-export default function handler(req, res) {
-    res.status(200).json([
+export function getTestItems() {
+    return [
         {
             id: 1,
             title: "Blue microphone",
@@ -98,5 +96,9 @@ export default function handler(req, res) {
             descripcion:
                 "Canon Mark III camera with full-frame sensor, advanced autofocus system, and high-speed continuous shooting for professional-grade photography.",
         },
-    ]);
+    ];
+}
+
+export default function handler(req, res) {
+    res.status(200).json(getTestItems());
 }

@@ -25,7 +25,7 @@ export default function Home({ items }) {
 }
 
 export async function getStaticProps() {
-    const res = await getLatestItems();
+    const res = getLatestItems();
     return {
         props: {
             items: res,

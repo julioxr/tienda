@@ -53,13 +53,13 @@ export default function Product({ item, showAs, priceFormatter }) {
                         <Image
                             src={item.image}
                             alt={item.descripcion}
-                            width={600}
-                            height={600}
+                            width={800}
+                            height={800}
                             className="rounded-md"
                         />
                     </div>
 
-                    <div className="flex flex-col gap-4 pr-4">
+                    <div className="flex flex-col gap-4">
                         <div>
                             <h2 className="text-3xl font-bold text-gray-700">
                                 {item.title}
@@ -77,7 +77,7 @@ export default function Product({ item, showAs, priceFormatter }) {
                     </div>
                 </div>
                 {/* Aca probar agregar minicards */}
-                <div className="flex gap-8 justify-center p-14 items-center">
+                {/* <div className="flex gap-8 justify-center p-14 items-center">
                     <div className="w-40 h-40 flex justify-center items-center m-2">
                         <Image
                             src={item.image}
@@ -114,7 +114,7 @@ export default function Product({ item, showAs, priceFormatter }) {
                             className="rounded-md"
                         />
                     </div>
-                </div>
+                </div> */}
                 {/* Aca va la tabla*/}
                 <Table />
             </div>
@@ -193,7 +193,7 @@ export default function Product({ item, showAs, priceFormatter }) {
                 </Link>
             </div>
             <div>
-                <h3 className="text-xl font-semibold text-gray-700 -mt-1">
+                <h3 className="text-xl font-semibold text-gray-700 mt-2">
                     <Link href={`/store/${convertToPath(item.title)}`}>
                         {item.title}
                     </Link>
@@ -202,7 +202,7 @@ export default function Product({ item, showAs, priceFormatter }) {
             <div className="text-center text-lg text-gray-400 font-medium -mt-1 mb-4">
                 ${price}
             </div>
-            <div className="mb-4">
+            <div className="mb-3">
                 <CartButton item={item} />
             </div>
         </div>

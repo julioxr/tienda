@@ -50,7 +50,6 @@ export default function StateWrapper({ children }) {
     const priceFormatter = (item) => {
         const price = item.price; // number 13000
         const priceWithDot = price.toLocaleString("es-US").replace(",", "."); // string 13.000
-        console.log(priceWithDot);
         return priceWithDot;
     };
 
