@@ -16,6 +16,7 @@ export default function Product({ item, showAs, priceFormatter }) {
         item.quantity == 1 ? "text-gray-300 pointer-events-none" : "";
 
     const price = cart.priceFormatter(item);
+    console.log(item.image);
 
     const handleQuantity = (e, item) => {
         const copy = [...cart.items];
