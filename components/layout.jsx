@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Footer from "./footer";
+import Footer from "./footer/footer";
 import Menu from "./menu";
 
 export const Layout = ({ children, title }) => {
@@ -18,7 +18,9 @@ export const Layout = ({ children, title }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Menu />
-            <section className="container mx-auto">{children}</section>
+            <section className="container mx-auto px-0 sm:px-2 ">
+                {children}
+            </section>
             <Footer />
         </>
     );

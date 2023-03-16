@@ -9,5 +9,5 @@ import { getTestItems } from "@/pages/api/items";
 
 export function getLatestItems() {
     const items = getTestItems();
-    return items.slice(0, 4);
+    return items.slice(0, 3);
 }

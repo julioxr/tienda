@@ -43,13 +43,13 @@ export default function Product({ item, showAs, priceFormatter }) {
         return (
             // <div className="h-[calc(100vh-328px)]">
             <div className="h-full">
-                <h1 className="text-base font-bold my-6">
+                <h1 className="my-6 text-base font-bold">
                     STORE{" "}
                     <span className="text-base font-thin">
                         / {`${item.title}`}
                     </span>
                 </h1>
-                <div className="flex gap-x-12 bg-white justify-center items-center mt-12 w-[1000px] mx-auto rounded-md shadow-xl">
+                <div className="mx-auto mt-12 flex w-[1000px] items-center justify-center gap-x-12 rounded-md bg-white shadow-xl">
                     <div className="p-4">
                         <Image
                             src={item.image}
@@ -66,7 +66,7 @@ export default function Product({ item, showAs, priceFormatter }) {
                                 {item.title}
                             </h2>
                         </div>
-                        <div className="text-lg text-gray-400 font-semibold -mt-3">
+                        <div className="-mt-3 text-lg font-semibold text-gray-400">
                             ${price}
                         </div>
                         <div className="w-3/4 text-gray-500">
@@ -125,7 +125,7 @@ export default function Product({ item, showAs, priceFormatter }) {
     if (showAs === "ListItem") {
         return (
             <>
-                <div className="flex gap-4 items-center p-4 bg-white rounded-md relative text-gray-500">
+                <div className="relative flex items-center gap-4 rounded-md bg-white p-4 text-gray-500">
                     <Image
                         src={item.image}
                         alt={item.descripcion}
@@ -133,24 +133,24 @@ export default function Product({ item, showAs, priceFormatter }) {
                         height={70}
                     />
                     <div className="w-full">
-                        <div className="font-medium text-lg text-gray-700">
+                        <div className="text-lg font-medium text-gray-700">
                             {item.title}
                         </div>
                         <div className="pb-1">Cantidad:</div>
                         <div className="flex gap-2 text-xl text-gray-600">
                             <button
                                 id="remove"
-                                className={`flex justify-start items-center bg-gray-100 rounded ${disabled}`}
+                                className={`flex items-center justify-start rounded bg-gray-100 ${disabled}`}
                                 onClick={(e) => handleQuantity(e.target, item)}
                             >
                                 <MdRemove />
                             </button>
-                            <span className="flex justify-center items-center text-base font-medium">
+                            <span className="flex items-center justify-center text-base font-medium">
                                 {item.quantity}
                             </span>
                             <button
                                 id="add"
-                                className="flex justify-center items-center bg-gray-100 rounded"
+                                className="flex items-center justify-center rounded bg-gray-100"
                                 onClick={(e) => handleQuantity(e.target, item)}
                             >
                                 <MdAdd />
@@ -168,7 +168,7 @@ export default function Product({ item, showAs, priceFormatter }) {
                             </span>
                         </p>
                         <div
-                            className="absolute top-4 right-3 text-lg text-gray-700 cursor-pointer"
+                            className="absolute top-4 right-3 cursor-pointer text-lg text-gray-700"
                             onClick={() => cart.filterItems(item.id)}
                         >
                             {/* FUNCION PARA ELIMINAR DE LA LISTA */}
@@ -180,8 +180,40 @@ export default function Product({ item, showAs, priceFormatter }) {
         );
     }
 
+    if (showAs === "carrousel") {
+        return (
+            <div className="flex w-80 flex-col items-center justify-around gap-2 rounded-md bg-white p-4 text-center shadow-xl">
+                <div>
+                    <Link href={`/store/${convertToPath(item.title)}`}>
+                        <Image
+                            src={item.image}
+                            alt={item.descripcion}
+                            width={500}
+                            height={500}
+                            className="rounded-md"
+                        />
+                    </Link>
+                </div>
+                <div>
+                    <h3 className="mt-2 text-xl font-semibold text-gray-700">
+                        <Link href={`/store/${convertToPath(item.title)}`}>
+                            {item.title}
+                        </Link>
+                    </h3>
+                </div>
+                <div className="-mt-1 mb-4 text-center text-lg font-medium text-gray-400">
+                    ${price}
+                    asdsad
+                </div>
+                <div className="mb-3">
+                    <CartButton item={item} />
+                </div>
+            </div>
+        );
+    }
+
     return (
-        <div className="bg-white rounded-md text-center shadow-xl p-4 gap-2 flex flex-col justify-around items-center w-80">
+        <div className="flex w-80 flex-col items-center justify-around gap-2 rounded-md bg-white p-4 text-center shadow-xl">
             <div>
                 <Link href={`/store/${convertToPath(item.title)}`}>
                     <Image
@@ -194,14 +226,15 @@ export default function Product({ item, showAs, priceFormatter }) {
                 </Link>
             </div>
             <div>
-                <h3 className="text-xl font-semibold text-gray-700 mt-2">
+                <h3 className="mt-2 text-xl font-semibold text-gray-700">
                     <Link href={`/store/${convertToPath(item.title)}`}>
                         {item.title}
                     </Link>
                 </h3>
             </div>
-            <div className="text-center text-lg text-gray-400 font-medium -mt-1 mb-4">
+            <div className="-mt-1 mb-4 text-center text-lg font-medium text-gray-400">
                 ${price}
+                asdsad
             </div>
             <div className="mb-3">
                 <CartButton item={item} />

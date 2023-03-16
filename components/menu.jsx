@@ -13,9 +13,9 @@ export default function Menu() {
 
     return (
         <>
-            <div className="fixed shadow-sm w-full h-20 -z-10"></div>
-            <nav className="h-20 mx-auto container">
-                <div className="flex justify-between h-20 items-center container mx-auto fixed bg-[#efefef] z-10 gap-4 p-8">
+            <div className="fixed -z-10 h-20 w-full shadow-sm"></div>
+            <nav className="container mx-auto h-20">
+                <div className="container fixed z-10 mx-auto flex h-20 items-center justify-between gap-4 bg-[#efefef] p-8 sm:p-0 sm:px-2">
                     {/* Logo */}
                     <div className="order-2">
                         <Link href="/">
@@ -25,25 +25,25 @@ export default function Menu() {
                         </Link>
                     </div>
                     {/* Burger Menu */}
-                    <IoMdMenu className="text-3xl sm:hidden order-1" />
+                    <IoMdMenu className="order-1 text-3xl sm:hidden" />
                     {/* Menu */}
-                    <div className="gap-20 flex order-2">
-                        <div className="sm:flex font-semibold bg-transparent gap-6 hidden">
+                    <div className="order-2 flex gap-20">
+                        <div className="hidden gap-6 bg-transparent font-semibold sm:flex">
                             <Link
                                 href="/"
-                                className="hover:underline decoration-[3px] decoration-pink-500"
+                                className="decoration-pink-500 decoration-[3px] hover:underline"
                             >
                                 Home
                             </Link>
                             <Link
                                 href="/store"
-                                className="hover:underline decoration-[3px] decoration-pink-500"
+                                className="decoration-pink-500 decoration-[3px] hover:underline"
                             >
                                 Store
                             </Link>
                             <Link
                                 href="/faq"
-                                className="hover:underline decoration-[3px] decoration-pink-500"
+                                className="decoration-pink-500 decoration-[3px] hover:underline"
                             >
                                 FAQ
                             </Link>
@@ -52,11 +52,11 @@ export default function Menu() {
                         <div className="bg-transparent">
                             <a
                                 href="#"
-                                className="bg-transparent flex justify-center items-center"
+                                className="flex items-center justify-center bg-transparent"
                                 onClick={handleOpenCart}
                             >
                                 <BsCart2 className="text-xl" />
-                                <span className="bg-red-500 rounded-full text-white flex justify-center items-center h-5 w-5 text-[0.6rem] -mt-6">
+                                <span className="-mt-6 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[0.6rem] text-white">
                                     {cart.getNumberOfItems()}
                                 </span>
                             </a>
