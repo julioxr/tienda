@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BsCart2 } from "react-icons/bs";
+import { IoMdMenu } from "react-icons/io";
 
 import { useAppContext } from "./stateWrapper";
 
@@ -14,16 +15,20 @@ export default function Menu() {
         <>
             <div className="fixed shadow-sm w-full h-20 -z-10"></div>
             <nav className="h-20 mx-auto container">
-                <div className="flex justify-between h-20 items-center container mx-auto fixed bg-[#efefef] z-10">
-                    <div>
+                <div className="flex justify-between h-20 items-center container mx-auto fixed bg-[#efefef] z-10 gap-4 p-8">
+                    {/* Logo */}
+                    <div className="order-2">
                         <Link href="/">
                             <h2 className="text-2xl font-extrabold">
                                 T I E N D A
                             </h2>
                         </Link>
                     </div>
-                    <div className="flex gap-20">
-                        <div className="flex font-semibold bg-transparent gap-6">
+                    {/* Burger Menu */}
+                    <IoMdMenu className="text-3xl sm:hidden order-1" />
+                    {/* Menu */}
+                    <div className="gap-20 flex order-2">
+                        <div className="sm:flex font-semibold bg-transparent gap-6 hidden">
                             <Link
                                 href="/"
                                 className="hover:underline decoration-[3px] decoration-pink-500"
@@ -43,6 +48,7 @@ export default function Menu() {
                                 FAQ
                             </Link>
                         </div>
+                        {/* Cart */}
                         <div className="bg-transparent">
                             <a
                                 href="#"
