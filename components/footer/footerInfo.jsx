@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function FooterInfo() {
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2 sm:gap-4">
             <h4 className="text-xl font-bold">Attention</h4>
-            <div className="flex gap-6 text-base font-thin">
+            <div className="flex gap-3 text-base font-thin sm:gap-6">
                 <Link href="/" className="">
                     Help
                 </Link>

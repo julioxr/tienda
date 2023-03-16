@@ -203,7 +203,6 @@ export default function Product({ item, showAs, priceFormatter }) {
                 </div>
                 <div className="-mt-1 mb-4 text-center text-lg font-medium text-gray-400">
                     ${price}
-                    asdsad
                 </div>
                 <div className="mb-3">
                     <CartButton item={item} />
@@ -234,7 +233,6 @@ export default function Product({ item, showAs, priceFormatter }) {
             </div>
             <div className="-mt-1 mb-4 text-center text-lg font-medium text-gray-400">
                 ${price}
-                asdsad
             </div>
             <div className="mb-3">
                 <CartButton item={item} />
