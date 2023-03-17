@@ -6,12 +6,11 @@ export default function CartButton({ item }) {
     function handleClick() {
         cart.addItemToCart(item);
         cart.openCart();
-        console.log("Funcionas");
     }
 
     return (
         <button
-            className="bg-gray-800 text-white align-middle h-12 rounded-full px-6"
+            className="h-12 rounded-full bg-gray-800 px-6 align-middle text-white"
             onClick={handleClick}
         >
             Add to cart

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Footer from "./footer/footer";
-import Menu from "./menu";
+import Menu from "./menu/menu";
 
 export const Layout = ({ children, title }) => {
     return (
