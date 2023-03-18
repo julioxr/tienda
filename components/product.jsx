@@ -4,19 +4,18 @@ import { useState } from "react";
 import { BsTrash3 } from "react-icons/bs";
 import { MdRemove, MdAdd } from "react-icons/md";
 import { convertToPath } from "@/lib/utils";
-import CartButton from "./cartButton";
-import ErrorMessage from "./errorMessage";
-import { useAppContext } from "./stateWrapper";
+import CartButton from "@/components/cartButton";
+import ErrorMessage from "@/components/errorMessage";
+import { useAppContext } from "@/components/stateWrapper";
 import Table from "./table";
 
-export default function Product({ item, showAs, priceFormatter }) {
+export default function Product({ item, showAs }) {
     const cart = useAppContext();
     const [error, setError] = useState(false);
     const disabled =
         item.quantity == 1 ? "text-gray-300 pointer-events-none" : "";
 
     const price = cart.priceFormatter(item);
-    console.log(item.image);
 
     const handleQuantity = (e, item) => {
         const copy = [...cart.items];
@@ -41,7 +40,6 @@ export default function Product({ item, showAs, priceFormatter }) {
 
     if (showAs === "Page") {
         return (
-            // <div className="h-[calc(100vh-328px)]">
             <div className="h-full">
                 <h1 className="my-6 text-base font-bold">
                     STORE{" "}

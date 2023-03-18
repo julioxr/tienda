@@ -12,15 +12,24 @@ const AppContext = createContext({
 });
 
 export default function StateWrapper({ children }) {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isCartOpen, setIsCartOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [items, setItems] = useState([]);
 
     const handleOpenCart = () => {
-        setIsOpen(true);
+        setIsCartOpen(true);
     };
 
     const handleCloseCart = () => {
-        setIsOpen(false);
+        setIsCartOpen(false);
+    };
+
+    const handleOpenMenu = () => {
+        setIsMenuOpen(true);
+    };
+
+    const handleCloseMenu = () => {
+        setIsMenuOpen(false);
     };
 
     const handleAddItemToCart = (item) => {
@@ -49,14 +58,14 @@ export default function StateWrapper({ children }) {
 
     const priceFormatter = (item) => {
         const price = item.price; // number 13000
-        const priceWithDot = price.toLocaleString("es-US").replace(",", "."); // string 13.000
+        const priceWithDot = price.toLocaleString("es-AR"); // string 13.000
         return priceWithDot;
     };
 
     return (
         <AppContext.Provider
             value={{
-                isOpen,
+                isCartOpen,
                 items,
                 openCart: handleOpenCart,
                 closeCart: handleCloseCart,
@@ -65,6 +74,11 @@ export default function StateWrapper({ children }) {
                 filterItems: handleFilterItems,
                 setItems,
                 priceFormatter,
+                setIsCartOpen,
+                isMenuOpen,
+                setIsMenuOpen,
+                handleOpenMenu,
+                handleCloseMenu,
             }}
         >
             {children}

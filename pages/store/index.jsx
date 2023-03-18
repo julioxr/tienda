@@ -1,6 +1,5 @@
 import { Layout } from "@/components/layout";
 import Product from "@/components/product";
-import { getItems } from "@/services/itemService";
 import { getTestItems } from "../api/items";
 
 export default function Index({ items }) {
