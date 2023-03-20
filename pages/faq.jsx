@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout";
 import { useAppContext } from "@/components/stateWrapper";
 
-export default function faq() {
+export default function Faq() {
     const { isMenuOpen } = useAppContext();
 
     return (

@@ -42,7 +42,7 @@ export default function Product({ item, showAs }) {
         return (
             <div className="h-full">
                 {/* Breadcrumb */}
-                <h1 className="my-6 px-8 text-base font-bold lg:px-0">
+                <h1 className="my-6 px-8 text-base font-bold sm:px-0">
                     STORE{" "}
                     <span className="text-base font-thin">
                         / {`${item.title}`}
