@@ -1,13 +1,13 @@
 export default function Table({ item }) {
     return (
-        <div className="mb-14 mt-16 flex justify-start overflow-x-auto px-2 sm:justify-center sm:px-0">
+        <div className="mb-14 mt-16 flex justify-start overflow-x-auto px-4 sm:justify-center sm:px-0">
             <table className="w-[1000px] min-w-[600px] text-left text-sm text-gray-500">
-                <thead className="bg-gray-100 text-xs uppercase text-gray-700">
+                <thead className="bg-gray-200 text-xs uppercase text-gray-700">
                     <tr>
-                        <th className="absolute w-40 bg-gray-500 py-3 px-2 sm:static sm:px-6">
+                        <th className="bg-gray-200 py-3 px-2 sm:static sm:px-6">
                             Caracteristicas
                         </th>
-                        <th className=" w-60 bg-red-600 py-3 px-2 pl-44 sm:w-auto sm:px-6">
+                        <th className=" py-3 px-2 pl-44 sm:w-auto sm:px-6">
                             Descripcion
                         </th>
                     </tr>
@@ -16,11 +16,11 @@ export default function Table({ item }) {
                     {item.info.map((item) => {
                         return (
                             <>
-                                <tr className="border-b bg-white">
-                                    <th className="absolute w-40 whitespace-nowrap  bg-gray-500 py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
+                                <tr className="border-b">
+                                    <th className="whitespace-nowrap bg-white py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
                                         {item.header}
                                     </th>
-                                    <td className="w-60 bg-red-600 py-4 px-2 pl-44 sm:w-auto sm:px-6">
+                                    <td className="bg-white py-4 px-2 sm:w-auto sm:px-6">
                                         {item.description}
                                     </td>
                                 </tr>

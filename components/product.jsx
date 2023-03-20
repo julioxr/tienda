@@ -42,7 +42,7 @@ export default function Product({ item, showAs }) {
         return (
             <div className="h-full">
                 {/* Breadcrumb */}
-                <h1 className="my-6 px-8 text-base font-bold sm:px-0">
+                <h1 className="my-6 px-8 text-base font-bold lg:px-0">
                     STORE{" "}
                     <span className="text-base font-thin">
                         / {`${item.title}`}
@@ -50,18 +50,18 @@ export default function Product({ item, showAs }) {
                 </h1>
 
                 {/* Card and description */}
-                <div className="mx-auto mt-12 flex w-80 flex-col items-center justify-center gap-x-12 rounded-md bg-white shadow-xl sm:w-[1000px] sm:flex-row">
+                <div className="mx-auto mt-12 flex w-80 flex-col items-center justify-center gap-x-12 rounded-md bg-white shadow-xl md:w-[752px] md:flex-row lg:w-[1000px]">
                     <div className="p-4">
                         <Image
                             src={item.image}
                             alt={item.descripcion}
                             width={800}
                             height={800}
-                            className="w-[500px] rounded-md sm:w-[800px]"
+                            className="w-[500px] rounded-md md:w-[800px]"
                         />
                     </div>
 
-                    <div className="flex flex-col gap-4 p-4 sm:p-0">
+                    <div className="flex flex-col gap-4 p-4 lg:p-0">
                         <div>
                             <h2 className="text-3xl font-bold text-gray-700">
                                 {item.title}
@@ -70,10 +70,10 @@ export default function Product({ item, showAs }) {
                         <div className="-mt-3 text-lg font-semibold text-gray-400">
                             ${price}
                         </div>
-                        <div className="text-gray-500 sm:w-3/4">
+                        <div className="w-full text-gray-500 md:w-3/4">
                             {item.descripcion}
                         </div>
-                        <div className="mt4 mx-auto sm:mt-8">
+                        <div className="mt-4 mb-2 self-center md:self-start lg:mb-0 lg:mt-8">
                             <CartButton item={item} />
                         </div>
                     </div>
