@@ -70,7 +70,7 @@ export default function Product({ item, showAs }) {
                         <div className="-mt-3 text-lg font-semibold text-gray-400">
                             ${price}
                         </div>
-                        <div className="w-full text-gray-500 md:w-3/4">
+                        <div className="w-full text-gray-500 lg:w-3/4">
                             {item.descripcion}
                         </div>
                         <div className="mt-4 mb-2 self-center md:self-start lg:mb-0 lg:mt-8">

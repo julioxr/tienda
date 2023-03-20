@@ -7,7 +7,7 @@ export default function Table({ item }) {
                         <th className="bg-gray-200 py-3 px-2 sm:static sm:px-6">
                             Caracteristicas
                         </th>
-                        <th className=" py-3 px-2 pl-44 sm:w-auto sm:px-6">
+                        <th className=" py-3 px-2  sm:w-auto sm:px-6">
                             Descripcion
                         </th>
                     </tr>
