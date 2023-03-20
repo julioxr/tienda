@@ -1,4 +1,6 @@
 export default function Table({ item }) {
+    console.log(item);
+
     return (
         <div className="mb-14 mt-16 flex justify-start overflow-x-auto px-2 sm:justify-center sm:px-0">
             <table className="w-[1000px] min-w-[600px] text-left text-sm text-gray-500">
@@ -13,20 +15,59 @@ export default function Table({ item }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {item.info.map((item) => {
-                        return (
-                            <>
-                                <tr className="border-b bg-white">
-                                    <th className="absolute w-40 whitespace-nowrap  bg-gray-500 py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
-                                        {item.header}
-                                    </th>
-                                    <td className="w-60 bg-red-600 py-4 px-2 pl-44 sm:w-auto sm:px-6">
-                                        {item.description}
-                                    </td>
-                                </tr>
-                            </>
-                        );
-                    })}
+                    <tr className="border-b bg-white">
+                        <th className="absolute w-40 whitespace-nowrap  bg-gray-500 py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
+                            Sensor
+                        </th>
+                        <td className="w-60 bg-red-600 py-4 px-2 pl-44 sm:w-auto sm:px-6">
+                            Sensor CMOS de fotograma completo de 22,3
+                            megapíxeles con procesador de imagen DIGIC 5+
+                        </td>
+                    </tr>
+                    <tr className="border-b bg-white">
+                        <th className="absolute w-40 whitespace-nowrap  bg-gray-500 py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
+                            Rango de ISO
+                        </th>
+                        <td className="w-60 bg-red-600 py-4 px-2 pl-44 sm:w-auto sm:px-6">
+                            100 - 25600 (ampliable a 50 - 102400)
+                        </td>
+                    </tr>
+                    <tr className="border-b bg-white">
+                        <th className="absolute w-40 whitespace-nowrap  bg-gray-500 py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
+                            Enfoque automático
+                        </th>
+                        <td className="w-60 bg-red-600 py-4 px-2 pl-44 sm:w-auto sm:px-6">
+                            Sistema de enfoque automático de 61 puntos con 41
+                            puntos tipo cruz
+                        </td>
+                    </tr>
+                    <tr className="border-b bg-white">
+                        <th className="absolute w-40 whitespace-nowrap  bg-gray-500 py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
+                            Grabación de video
+                        </th>
+                        <td className="w-60 bg-red-600 py-4 px-2 pl-44 sm:w-auto sm:px-6">
+                            Grabación de video Full HD a 1080p con control
+                            manual y salida HDMI
+                        </td>
+                    </tr>
+                    <tr className="border-b bg-white">
+                        <th className="absolute w-40 whitespace-nowrap  bg-gray-500 py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
+                            Velocidad de disparo
+                        </th>
+                        <td className="w-60 bg-red-600 py-4 px-2 pl-44 sm:w-auto sm:px-6">
+                            Velocidad de disparo continuo de hasta 6 fotogramas
+                            por segundo
+                        </td>
+                    </tr>
+                    <tr className="border-b bg-white">
+                        <th className="absolute w-40 whitespace-nowrap  bg-gray-500 py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
+                            Pantalla
+                        </th>
+                        <td className="w-60 bg-red-600 py-4 px-2 pl-44 sm:w-auto sm:px-6">
+                            Pantalla LCD de 3,2 pulgadas con resolución de
+                            1.040.000 píxeles y revestimiento antirreflejos
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

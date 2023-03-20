@@ -41,24 +41,27 @@ export default function Product({ item, showAs }) {
     if (showAs === "Page") {
         return (
             <div className="h-full">
-                <h1 className="my-6 text-base font-bold">
+                {/* Breadcrumb */}
+                <h1 className="my-6 px-8 text-base font-bold sm:px-0">
                     STORE{" "}
                     <span className="text-base font-thin">
                         / {`${item.title}`}
                     </span>
                 </h1>
-                <div className="mx-auto mt-12 flex w-[1000px] items-center justify-center gap-x-12 rounded-md bg-white shadow-xl">
+
+                {/* Card and description */}
+                <div className="mx-auto mt-12 flex w-80 flex-col items-center justify-center gap-x-12 rounded-md bg-white shadow-xl sm:w-[1000px] sm:flex-row">
                     <div className="p-4">
                         <Image
                             src={item.image}
                             alt={item.descripcion}
                             width={800}
                             height={800}
-                            className="rounded-md"
+                            className="w-[500px] rounded-md sm:w-[800px]"
                         />
                     </div>
 
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 p-4 sm:p-0">
                         <div>
                             <h2 className="text-3xl font-bold text-gray-700">
                                 {item.title}
@@ -67,14 +70,18 @@ export default function Product({ item, showAs }) {
                         <div className="-mt-3 text-lg font-semibold text-gray-400">
                             ${price}
                         </div>
-                        <div className="w-3/4 text-gray-500">
+                        <div className="text-gray-500 sm:w-3/4">
                             {item.descripcion}
                         </div>
-                        <div className="mt-8">
+                        <div className="mt4 mx-auto sm:mt-8">
                             <CartButton item={item} />
                         </div>
                     </div>
                 </div>
+
+                {/* Table with data */}
+                <Table item={item} />
+
                 {/* Aca probar agregar minicards */}
                 {/* <div className="flex gap-8 justify-center p-14 items-center">
                     <div className="w-40 h-40 flex justify-center items-center m-2">
@@ -115,7 +122,6 @@ export default function Product({ item, showAs }) {
                     </div>
                 </div> */}
                 {/* Aca va la tabla*/}
-                <Table />
             </div>
         );
     }

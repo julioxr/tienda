@@ -7,6 +7,37 @@ export function getTestItems() {
             image: "/img/1.jpg",
             descripcion:
                 "Professional microphone with high sensitivity and sound quality for recording and live streaming.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 2,
@@ -15,6 +46,37 @@ export function getTestItems() {
             image: "/img/2.jpg",
             descripcion:
                 "Sony headphones with noise-canceling technology and exceptional sound quality for an immersive audio experience.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 3,
@@ -23,6 +85,37 @@ export function getTestItems() {
             image: "/img/3.jpg",
             descripcion:
                 "Canon camera lens with fast autofocus and sharp, detailed image quality for professional photography.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 4,
@@ -31,6 +124,37 @@ export function getTestItems() {
             image: "/img/4.jpg",
             descripcion:
                 "Casio watch with stylish design and features such as stopwatch, alarm, and water resistance for daily and sports use.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 5,
@@ -39,6 +163,37 @@ export function getTestItems() {
             image: "/img/5.jpg",
             descripcion:
                 "Xiaomi wireless earbuds with stable Bluetooth connection, intuitive touch control, and high-fidelity sound for enjoying music anywhere.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 6,
@@ -47,6 +202,37 @@ export function getTestItems() {
             image: "/img/6.jpg",
             descripcion:
                 "Leather wallet with multiple compartments for cards and bills, stylish design, and durability for daily use.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 7,
@@ -55,6 +241,37 @@ export function getTestItems() {
             image: "/img/7.jpg",
             descripcion:
                 "High-quality rechargeable lighter with stylish design, adjustable flame, and reliability for long-lasting use.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 8,
@@ -63,6 +280,37 @@ export function getTestItems() {
             image: "/img/8.jpg",
             descripcion:
                 "Notebook with high-quality paper, durable cover, and convenient size for daily use and creative inspiration.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 9,
@@ -71,6 +319,37 @@ export function getTestItems() {
             image: "/img/9.jpg",
             descripcion:
                 "High-quality ceramic mug with ergonomic handle and vibrant design for a cozy and stylish drinking experience.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 10,
@@ -79,6 +358,37 @@ export function getTestItems() {
             image: "/img/10.jpg",
             descripcion:
                 "Red drone with advanced camera technology, long battery life, and stable flight control for capturing stunning aerial footage.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 11,
@@ -87,6 +397,37 @@ export function getTestItems() {
             image: "/img/11.jpg",
             descripcion:
                 "Guitar picks with premium materials and various thicknesses for optimal tone and precision during playing sessions.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
         {
             id: 12,
@@ -95,6 +436,37 @@ export function getTestItems() {
             image: "/img/12.jpg",
             descripcion:
                 "Canon Mark III camera with full-frame sensor, advanced autofocus system, and high-speed continuous shooting for professional-grade photography.",
+            info: [
+                {
+                    header: "Sensor",
+                    description:
+                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                },
+                {
+                    header: "Rango de ISO",
+                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                },
+                {
+                    header: "Enfoque automático",
+                    description:
+                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                },
+                {
+                    header: "Grabación de video",
+                    description:
+                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                },
+                {
+                    header: "Velocidad de disparo",
+                    description:
+                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                },
+                {
+                    header: "Pantalla",
+                    description:
+                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                },
+            ],
         },
     ];
 }

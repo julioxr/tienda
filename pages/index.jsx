@@ -6,7 +6,7 @@ import Hero from "@/components/hero";
 import { useAppContext } from "@/components/stateWrapper";
 
 export default function Home({ items }) {
-    const { isMenuOpen, handleCloseMenu } = useAppContext();
+    const { isMenuOpen } = useAppContext();
     return (
         <>
             {/* Este div es solo para poner fixed todo cuando se abre el menu hamburguesa y no se pueda scrollear */}
