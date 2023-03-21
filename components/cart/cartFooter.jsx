@@ -9,17 +9,17 @@ export default function CartFooter({ getTotal, handleCloseCart }) {
                 <div className="mb-6 text-right text-2xl font-bold">
                     Total: ${getTotal()}
                 </div>
-                <div className="flex justify-center gap-8">
+                <div className="flex justify-between gap-8">
                     <Link href={"/store"}>
                         <button
-                            className="rounded-full border border-slate-800 px-4 py-2 sm:px-6"
+                            className="rounded-full border border-slate-800 px-6 py-2 sm:px-6"
                             onClick={handleCloseCart}
                         >
                             Add more products
                         </button>
                     </Link>
 
-                    <button className="rounded-full bg-slate-800 px-4 py-2 text-white sm:px-6">
+                    <button className="rounded-full bg-slate-800 px-6 py-2 text-white sm:px-6">
                         Checkout
                     </button>
                 </div>

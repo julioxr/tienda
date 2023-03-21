@@ -33,7 +33,7 @@ export default function ShoppingCart() {
                 {items.length === 0 ? (
                     <CartEmpty />
                 ) : (
-                    <div className="relative h-[calc(100vh-140px)] w-full sm:w-[364px]">
+                    <div className="relative h-[calc(100vh-150px)] w-full sm:w-[364px]">
                         {/* Items de card en carrito */}
                         <h3 className="mt-8 text-xl font-bold">Your items</h3>
                         <div className="h-[calc(100vh-350px)] overflow-y-auto">
