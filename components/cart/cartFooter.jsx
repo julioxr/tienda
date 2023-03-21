@@ -12,14 +12,14 @@ export default function CartFooter({ getTotal, handleCloseCart }) {
                 <div className="flex justify-center gap-8">
                     <Link href={"/store"}>
                         <button
-                            className="rounded-full border border-slate-800 px-6 py-2"
+                            className="rounded-full border border-slate-800 px-4 py-2 sm:px-6"
                             onClick={handleCloseCart}
                         >
                             Add more products
                         </button>
                     </Link>
 
-                    <button className="rounded-full bg-slate-800 px-6 py-2 text-white">
+                    <button className="rounded-full bg-slate-800 px-4 py-2 text-white sm:px-6">
                         Checkout
                     </button>
                 </div>

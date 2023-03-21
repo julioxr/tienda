@@ -22,7 +22,7 @@ export default function Menu() {
                             onClick={handleCloseMenu}
                         ></div>
                     )}
-                    <MenuLogo />
+                    <MenuLogo onClick={handleOpenMenu} />
                     {/* Burger menu */}
                     <IoMdMenu
                         className="pointer-events-auto order-1 cursor-pointer text-3xl sm:hidden"

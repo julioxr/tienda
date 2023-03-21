@@ -40,7 +40,7 @@ export default function Product({ item, showAs }) {
 
     if (showAs === "Page") {
         return (
-            <div className="h-full">
+            <>
                 {/* Breadcrumb */}
                 <h1 className="my-6 px-8 text-base font-bold sm:px-0">
                     STORE{" "}
@@ -48,42 +48,42 @@ export default function Product({ item, showAs }) {
                         / {`${item.title}`}
                     </span>
                 </h1>
+                <div className="flex flex-col items-center justify-center">
+                    {/* Card and description */}
+                    <div className="mx-8 flex max-w-[500px] flex-col items-center justify-center gap-x-12 rounded-md bg-white shadow-xl sm:mx-auto md:w-[752px] md:max-w-none md:flex-row lg:w-[1000px]">
+                        <div className="p-4">
+                            <Image
+                                src={item.image}
+                                alt={item.descripcion}
+                                width={800}
+                                height={800}
+                                className="w-[500px] rounded-md md:w-[800px]"
+                            />
+                        </div>
 
-                {/* Card and description */}
-                <div className="mx-auto mt-12 flex w-80 flex-col items-center justify-center gap-x-12 rounded-md bg-white shadow-xl md:w-[752px] md:flex-row lg:w-[1000px]">
-                    <div className="p-4">
-                        <Image
-                            src={item.image}
-                            alt={item.descripcion}
-                            width={800}
-                            height={800}
-                            className="w-[500px] rounded-md md:w-[800px]"
-                        />
+                        <div className="flex flex-col gap-4 p-4 lg:p-0">
+                            <div>
+                                <h2 className="text-3xl font-bold text-gray-700">
+                                    {item.title}
+                                </h2>
+                            </div>
+                            <div className="-mt-3 text-lg font-semibold text-gray-400">
+                                ${price}
+                            </div>
+                            <div className="w-full text-gray-500 lg:w-3/4">
+                                {item.descripcion}
+                            </div>
+                            <div className="mt-4 mb-2 self-center md:self-start lg:mb-0 lg:mt-8">
+                                <CartButton item={item} />
+                            </div>
+                        </div>
+
+                        {/* Table with data */}
                     </div>
+                    <Table item={item} />
 
-                    <div className="flex flex-col gap-4 p-4 lg:p-0">
-                        <div>
-                            <h2 className="text-3xl font-bold text-gray-700">
-                                {item.title}
-                            </h2>
-                        </div>
-                        <div className="-mt-3 text-lg font-semibold text-gray-400">
-                            ${price}
-                        </div>
-                        <div className="w-full text-gray-500 lg:w-3/4">
-                            {item.descripcion}
-                        </div>
-                        <div className="mt-4 mb-2 self-center md:self-start lg:mb-0 lg:mt-8">
-                            <CartButton item={item} />
-                        </div>
-                    </div>
-                </div>
-
-                {/* Table with data */}
-                <Table item={item} />
-
-                {/* Aca probar agregar minicards */}
-                {/* <div className="flex gap-8 justify-center p-14 items-center">
+                    {/* Aca probar agregar minicards */}
+                    {/* <div className="flex gap-8 justify-center p-14 items-center">
                     <div className="w-40 h-40 flex justify-center items-center m-2">
                         <Image
                             src={item.image}
@@ -121,8 +121,9 @@ export default function Product({ item, showAs }) {
                         />
                     </div>
                 </div> */}
-                {/* Aca va la tabla*/}
-            </div>
+                    {/* Aca va la tabla*/}
+                </div>
+            </>
         );
     }
 

@@ -82,7 +82,6 @@ export default function StateWrapper({ children }) {
             }}
         >
             {children}
-            <ShoppingCart />
         </AppContext.Provider>
     );
 }

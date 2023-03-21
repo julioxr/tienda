@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Footer from "./footer/footer";
 import Menu from "./menu/menu";
+import ShoppingCart from "./shoppingCart";
+// import { useAppContext } from "@/components/stateWrapper";
 
 export const Layout = ({ children, title }) => {
+    // const { isMenuOpen } = useAppContext();
     return (
         <>
             <Head>
@@ -19,6 +22,9 @@ export const Layout = ({ children, title }) => {
             </Head>
             <Menu />
             <section className="container mx-auto px-0 sm:px-2">
+                {/* <div className={`${isMenuOpen ? "fixed" : ""}`}> */}
+                <ShoppingCart />
+                {/* </div> */}
                 {children}
             </section>
             <Footer />

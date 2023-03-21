@@ -1,7 +1,12 @@
 export default function Table({ item }) {
+    const uno =
+        "mb-14 mt-16 flex justify-start self-start overflow-x-auto px-4 sm:px-0  md:self-auto";
+
+    const dos = "w-[1000px] min-w-[600px] text-left text-sm text-gray-500";
+
     return (
-        <div className="mb-14 mt-16 flex justify-start overflow-x-auto px-4 sm:justify-center sm:px-0">
-            <table className="w-[1000px] min-w-[600px] text-left text-sm text-gray-500">
+        <div className="min-w-[400px] self-start overflow-x-auto lg:self-auto">
+            <table className="mx-8 my-16 w-full text-left text-sm text-gray-500 sm:mx-0 lg:w-[1000px] ">
                 <thead className="bg-gray-200 text-xs uppercase text-gray-700">
                     <tr>
                         <th className="bg-gray-200 py-3 px-2 sm:static sm:px-6">
