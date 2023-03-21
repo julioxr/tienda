@@ -48,9 +48,9 @@ export default function Product({ item, showAs }) {
                         / {`${item.title}`}
                     </span>
                 </h1>
+                {/* // hidden oculta el minimo scroll en x */}
                 <div className="flex flex-col items-center justify-center overflow-x-hidden">
                     {" "}
-                    // hidden oculta el minimo scroll en x
                     {/* Card and description */}
                     <div className="mx-8 flex max-w-[500px] flex-col items-center justify-center gap-x-12 rounded-md bg-white shadow-xl sm:mx-auto md:w-[752px] md:max-w-none md:flex-row lg:w-[1000px]">
                         <div className="p-4">
