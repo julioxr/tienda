@@ -5,7 +5,7 @@ export default function CartButton({ item }) {
 
     function handleClick() {
         cart.addItemToCart(item);
-        cart.openCart();
+        // cart.openCart();
     }
 
     return (

@@ -48,7 +48,9 @@ export default function Product({ item, showAs }) {
                         / {`${item.title}`}
                     </span>
                 </h1>
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center overflow-x-hidden">
+                    {" "}
+                    // hidden oculta el minimo scroll en x
                     {/* Card and description */}
                     <div className="mx-8 flex max-w-[500px] flex-col items-center justify-center gap-x-12 rounded-md bg-white shadow-xl sm:mx-auto md:w-[752px] md:max-w-none md:flex-row lg:w-[1000px]">
                         <div className="p-4">
@@ -81,7 +83,6 @@ export default function Product({ item, showAs }) {
                         {/* Table with data */}
                     </div>
                     <Table item={item} />
-
                     {/* Aca probar agregar minicards */}
                     {/* <div className="flex gap-8 justify-center p-14 items-center">
                     <div className="w-40 h-40 flex justify-center items-center m-2">
