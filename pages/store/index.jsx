@@ -4,25 +4,30 @@ import { Layout } from "@/components/layout";
 import Product from "@/components/product";
 import { getItemsApi } from "../api/items";
 import { useAppContext } from "@/components/stateWrapper";
-import { BsFilter } from "react-icons/bs";
 
 export default function Index({ items }) {
     const { isMenuOpen } = useAppContext();
     const [products, setProducts] = useState([]);
+    const [selectedOption, setSelectedOption] = useState(null);
 
-    const filterByCategory = (e) => {
+    const filterByCategory = (selectedOption) => {
         const copy = [...items];
-        const selectedCategory = e.value;
-        const filteredCategory = copy.filter((item) => {
-            return item.type === selectedCategory;
-        });
-        setProducts(filteredCategory);
-        console.log(filteredCategory);
+
+        if (selectedOption === null) {
+            setSelectedOption(null);
+            setProducts(items);
+        } else {
+            const filteredCategory = copy.filter((item) => {
+                return item.type === selectedOption.value;
+            });
+            setSelectedOption(selectedOption);
+            setProducts(filteredCategory);
+        }
     };
 
     useEffect(() => {
         setProducts(items);
-    }, []);
+    }, [items]);
 
     const options = [
         { value: "photography", label: "Photography" },
@@ -45,16 +50,17 @@ export default function Index({ items }) {
                                 control: (state) => "min-w-50 sm:min-w-70",
                             }}
                             placeholder="Filter by category"
-                            onChange={(e) => filterByCategory(e)}
+                            onChange={filterByCategory}
                             instanceId
+                            value={selectedOption}
                         />
                     </div>
                     <div className="flex items-center justify-end gap-2 px-8 pb-8 text-sm  sm:px-0">
-                        <div className="flex w-44 justify-center gap-2 sm:w-60 sm:justify-end">
+                        {/* <div className="flex w-44 justify-center gap-2 sm:w-60 sm:justify-end">
                             <p>Order by price:</p>
                             <BsFilter className="inline-block text-2xl" />
                             <BsFilter className="inline-block rotate-180 text-2xl" />
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="mx-auto md:w-[768px] lg:w-[992px] 2xl:w-[1400px] ">
