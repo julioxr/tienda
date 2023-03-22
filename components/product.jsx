@@ -19,7 +19,6 @@ export default function Product({ item, showAs }) {
 
     const handleQuantity = (e, item) => {
         const copy = [...cart.items];
-        console.log(e.id);
 
         if (e.id === "remove") {
             if (item.quantity <= 1) {

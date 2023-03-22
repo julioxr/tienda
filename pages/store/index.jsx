@@ -1,11 +1,28 @@
+import { useState, useEffect } from "react";
 import Select from "react-select";
 import { Layout } from "@/components/layout";
 import Product from "@/components/product";
-import { getTestItems } from "../api/items";
+import { getItemsApi } from "../api/items";
 import { useAppContext } from "@/components/stateWrapper";
+import { BsFilter } from "react-icons/bs";
 
 export default function Index({ items }) {
     const { isMenuOpen } = useAppContext();
+    const [products, setProducts] = useState([]);
+
+    const filterByCategory = (e) => {
+        const copy = [...items];
+        const selectedCategory = e.value;
+        const filteredCategory = copy.filter((item) => {
+            return item.type === selectedCategory;
+        });
+        setProducts(filteredCategory);
+        console.log(filteredCategory);
+    };
+
+    useEffect(() => {
+        setProducts(items);
+    }, []);
 
     const options = [
         { value: "photography", label: "Photography" },
@@ -19,23 +36,31 @@ export default function Index({ items }) {
         <>
             <div className={`${isMenuOpen ? "fixed" : ""}`}>
                 <Layout title="Store">
-                    <div className="flex items-center justify-between px-8 pb-8 pt-4 sm:px-0">
+                    <div className="flex items-center justify-between px-8  pt-4 sm:px-0">
                         <h1 className="my-6 text-base font-bold">STORE</h1>
                         <Select
                             isClearable
                             options={options}
-                            classNames={{
-                                control: (state) => "w-50 sm:w-60",
+                            className={{
+                                control: (state) => "min-w-50 sm:min-w-70",
                             }}
                             placeholder="Filter by category"
-                            onChange={() => {}}
+                            onChange={(e) => filterByCategory(e)}
+                            instanceId
                         />
                     </div>
+                    <div className="flex items-center justify-end gap-2 px-8 pb-8 text-sm  sm:px-0">
+                        <div className="flex w-44 justify-center gap-2 sm:w-60 sm:justify-end">
+                            <p>Order by price:</p>
+                            <BsFilter className="inline-block text-2xl" />
+                            <BsFilter className="inline-block rotate-180 text-2xl" />
+                        </div>
+                    </div>
 
-                    <div className="mx-auto md:w-[768px] lg:w-[992px] 2xl:w-[1400px]">
+                    <div className="mx-auto md:w-[768px] lg:w-[992px] 2xl:w-[1400px] ">
                         <div className="flex flex-wrap justify-center gap-x-4 gap-y-8 pb-20 lg:justify-start 2xl:justify-center ">
-                            {items &&
-                                items.map((item) => (
+                            {products &&
+                                products.map((item) => (
                                     <Product item={item} key={item.id} />
                                 ))}
                         </div>
@@ -47,7 +72,7 @@ export default function Index({ items }) {
 }
 
 export async function getStaticProps() {
-    const res = getTestItems();
+    const res = getItemsApi();
     return {
         props: {
             items: res,

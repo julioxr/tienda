@@ -1,4 +1,4 @@
-export function getTestItems() {
+export function getItemsApi() {
     return [
         {
             id: 1,
@@ -484,5 +484,5 @@ export function getTestItems() {
 }
 
 export default function handler(req, res) {
-    res.status(200).json(getTestItems());
+    res.status(200).json(getItemsApi());
 }

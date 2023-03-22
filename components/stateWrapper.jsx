@@ -1,5 +1,4 @@
 import { createContext, useState, useContext } from "react";
-import ShoppingCart from "./shoppingCart";
 
 const AppContext = createContext({
     isOpen: false,
