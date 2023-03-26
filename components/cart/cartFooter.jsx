@@ -19,9 +19,14 @@ export default function CartFooter({ getTotal, handleCloseCart }) {
                         </button>
                     </Link>
 
-                    <button className="rounded-full bg-slate-800 px-6 py-2 text-white sm:px-6">
-                        Checkout
-                    </button>
+                    <Link href={"/checkout"}>
+                        <button
+                            className="rounded-full bg-slate-800 px-6 py-2 text-white sm:px-6"
+                            onClick={handleCloseCart}
+                        >
+                            Checkout
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

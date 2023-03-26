@@ -185,6 +185,46 @@ export default function Product({ item, showAs }) {
         );
     }
 
+    if (showAs === "checkout") {
+        return (
+            <>
+                <div className="relative flex w-full items-center gap-4 border-b-2 border-gray-500 p-4 text-gray-500">
+                    <Image
+                        src={item.image}
+                        alt={item.descripcion}
+                        width={70}
+                        height={70}
+                    />
+                    <div className="w-full">
+                        <div className="text-lg font-medium text-gray-700">
+                            {item.title}
+                        </div>
+                        <div className="pb-1">Cantidad: {item.quantity}</div>
+
+                        {/* Mensaje de error */}
+                        {error && <ErrorMessage />}
+                        <p className="text-right ">
+                            Precio:{" "}
+                            <span className="font-semibold">
+                                $
+                                {parseFloat(
+                                    cart.priceFormatter(item) * item.quantity // convierte el string en number para poder multiplicar y luego agrego 3 decimales
+                                ).toFixed(3)}
+                            </span>
+                        </p>
+                        <div
+                            className="absolute top-4 right-3 cursor-pointer text-lg text-gray-700"
+                            onClick={() => cart.filterItems(item.id)}
+                        >
+                            {/* FUNCION PARA ELIMINAR DE LA LISTA */}
+                            <BsTrash3 />
+                        </div>
+                    </div>
+                </div>
+            </>
+        );
+    }
+
     if (showAs === "carrousel") {
         return (
             <div className="flex w-80 flex-col items-center justify-around gap-2 rounded-md bg-white p-4 text-center shadow-xl">

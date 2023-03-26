@@ -61,6 +61,15 @@ export default function StateWrapper({ children }) {
         return priceWithDot;
     };
 
+    const getTotal = () => {
+        const total = items.reduce(
+            // el reduce tiene que retornar un valor
+            (acc, item) => acc + item.quantity * item.price,
+            0
+        );
+        return total.toLocaleString("es-AR");
+    };
+
     return (
         <AppContext.Provider
             value={{
@@ -78,6 +87,7 @@ export default function StateWrapper({ children }) {
                 setIsMenuOpen,
                 handleOpenMenu,
                 handleCloseMenu,
+                getTotal,
             }}
         >
             {children}

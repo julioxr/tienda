@@ -1,22 +1,13 @@
 import Product from "./product";
 import { BsXLg } from "react-icons/bs";
-import { useAppContext } from "./stateWrapper";
+import { useAppContext } from "@/components/stateWrapper";
 import CartEmpty from "./cart/cartEmpty";
 import CartFooter from "./cart/cartFooter";
 
 export default function ShoppingCart() {
-    const { isCartOpen, closeCart, items } = useAppContext();
+    const { isCartOpen, closeCart, items, getTotal } = useAppContext();
     const openStyle = isCartOpen ? "right-0" : "right-full";
     const isHide = isCartOpen ? "block" : "hidden";
-
-    const getTotal = () => {
-        const total = items.reduce(
-            // el reduce tiene que retornar un valor
-            (acc, item) => acc + item.quantity * item.price,
-            0
-        );
-        return total.toLocaleString("es-AR");
-    };
 
     return (
         <>
