@@ -70,6 +70,10 @@ export default function StateWrapper({ children }) {
         return total.toLocaleString("es-AR");
     };
 
+    const clearCart = () => {
+        setItems([]);
+    };
+
     return (
         <AppContext.Provider
             value={{
@@ -88,6 +92,7 @@ export default function StateWrapper({ children }) {
                 handleOpenMenu,
                 handleCloseMenu,
                 getTotal,
+                clearCart,
             }}
         >
             {children}

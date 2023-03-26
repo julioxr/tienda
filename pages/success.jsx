@@ -1,9 +1,16 @@
 import { Layout } from "@/components/layout";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useAppContext } from "@/components/stateWrapper";
 
 export default function Success() {
+    const { clearCart } = useAppContext();
     const router = useRouter();
     const data = router.query;
+
+    useEffect(() => {
+        clearCart();
+    }, []);
 
     console.log(data);
     return (

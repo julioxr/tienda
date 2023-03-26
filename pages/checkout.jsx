@@ -11,7 +11,7 @@ export default function Checkout() {
             <section className="min-h-[calc(100vh-340px)] px-8 sm:min-h-[calc(100vh-280px)] md:px-0">
                 <h1 className="my-6 text-base font-bold">CHECKOUT</h1>
                 <div className="flex flex-col justify-between md:flex-row">
-                    <div className="flex max-w-[600px] flex-col pb-8 md:w-1/2 md:pb-0">
+                    <div className="flex max-w-[600px] flex-col pb-8 md:w-1/2">
                         {items.map((item) => (
                             <Product
                                 key={item.id}
