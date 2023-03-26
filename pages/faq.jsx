@@ -8,7 +8,7 @@ export default function Faq() {
         <>
             <div className={`${isMenuOpen ? "fixed" : ""}`}>
                 <Layout title="FAQ">
-                    <div className="h-[calc(100vh-304px)]">
+                    <div className="min-h-[calc(100vh-304px)] px-8">
                         <h2 className="mt-6 mb-8 text-3xl">FAQ</h2>
 
                         <div>
