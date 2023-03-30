@@ -212,13 +212,6 @@ export default function Product({ item, showAs }) {
                                 ).toFixed(3)}
                             </span>
                         </p>
-                        <div
-                            className="absolute top-4 right-3 cursor-pointer text-lg text-gray-700"
-                            onClick={() => cart.filterItems(item.id)}
-                        >
-                            {/* FUNCION PARA ELIMINAR DE LA LISTA */}
-                            <BsTrash3 />
-                        </div>
                     </div>
                 </div>
             </>

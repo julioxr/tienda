@@ -25,13 +25,13 @@ export default function CheckoutForm() {
                     <div className="flex w-full flex-col gap-4 md:flex-row">
                         <div className="w-full">
                             <label
-                                className="mb-2 font-bold text-gray-700"
+                                className="mt-4 mb-2 font-bold text-gray-700"
                                 htmlFor="firstName"
                             >
                                 First Name
                             </label>
                             <Field
-                                className="borderbg-white w-full rounded-md px-4 py-2 text-gray-500"
+                                className="borderbg-white mt-2 w-full rounded-md px-4 py-2 text-gray-500"
                                 id="firstName"
                                 name="firstName"
                                 placeholder="Jhon"
@@ -46,7 +46,7 @@ export default function CheckoutForm() {
                                 Last Name
                             </label>
                             <Field
-                                className="borderbg-white w-full rounded-md px-4 py-2 text-gray-500"
+                                className="borderbg-white mt-2 w-full rounded-md px-4 py-2 text-gray-500"
                                 id="lastName"
                                 name="lastName"
                                 placeholder="Doe"
@@ -93,7 +93,7 @@ export default function CheckoutForm() {
                     />
 
                     <button
-                        className="mt-8 w-full rounded-md bg-gray-500 px-4 py-2 text-white hover:bg-gray-600"
+                        className="mt-8 w-full rounded-md bg-gray-800 px-4 py-2 text-white hover:bg-gray-700"
                         type="submit"
                     >
                         Finalizar compra
