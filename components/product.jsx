@@ -8,10 +8,14 @@ import CartButton from "@/components/cartButton";
 import ErrorMessage from "@/components/errorMessage";
 import { useAppContext } from "@/components/stateWrapper";
 import Table from "./table";
+import Toast from "./toast";
 
 export default function Product({ item, showAs }) {
     const cart = useAppContext();
     const [error, setError] = useState(false);
+    const [added, setAdded] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+
     const disabled =
         item.quantity == 1 ? "text-gray-300 pointer-events-none" : "";
 
@@ -75,10 +79,10 @@ export default function Product({ item, showAs }) {
                                 {item.descripcion}
                             </div>
                             <div className="mt-4 mb-2 self-center md:self-start lg:mb-0 lg:mt-8">
-                                <CartButton item={item} />
+                                <CartButton item={item} setAdded={setAdded} />
                             </div>
                         </div>
-
+                        {added && <Toast />}
                         {/* Table with data */}
                     </div>
                     <Table item={item} />
@@ -220,7 +224,7 @@ export default function Product({ item, showAs }) {
 
     if (showAs === "carrousel") {
         return (
-            <div className="flex w-80 flex-col items-center justify-around gap-2 rounded-md bg-white p-4 text-center shadow-xl">
+            <div className="relative flex w-80 flex-col items-center justify-around gap-2 overflow-y-hidden rounded-md bg-white p-4 text-center shadow-xl">
                 <div>
                     <Link href={`/store/${convertToPath(item.title)}`}>
                         <Image
@@ -243,8 +247,14 @@ export default function Product({ item, showAs }) {
                     ${price}
                 </div>
                 <div className="mb-3">
-                    <CartButton item={item} />
+                    <CartButton
+                        item={item}
+                        setAdded={setAdded}
+                        setShowToast={setShowToast}
+                    />
                 </div>
+                <Toast showToast={showToast} />
+                {/* {added && <Toast showToast={showToast} />} */}
             </div>
         );
     }
@@ -273,8 +283,9 @@ export default function Product({ item, showAs }) {
                 ${price}
             </div>
             <div className="mb-3">
-                <CartButton item={item} />
+                <CartButton item={item} setAdded={setAdded} />
             </div>
+            {added && <Toast />}
         </div>
     );
 }

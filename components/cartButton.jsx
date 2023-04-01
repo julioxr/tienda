@@ -1,10 +1,17 @@
 import { useAppContext } from "./stateWrapper";
 
-export default function CartButton({ item }) {
+export default function CartButton({ item, setAdded, setShowToast }) {
     const cart = useAppContext();
 
     function handleClick() {
         cart.addItemToCart(item);
+        setAdded(true);
+        setShowToast(true);
+        setTimeout(() => {
+            setAdded(false);
+            setShowToast(false);
+        }, 1500);
+
         // cart.openCart();
     }
 
