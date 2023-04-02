@@ -1,14 +1,37 @@
+import { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { useRouter } from "next/router";
 
 export default function CheckoutForm() {
     const router = useRouter();
+    const [error, setError] = useState(false);
+    const [access, setAccess] = useState(false);
+
+    // aca tengo que tener un estado que valie la isguiente pantalla
+
+    const handleInputs = (e) => {};
 
     const handleSubmit = (values) => {
-        router.push({
-            pathname: "/success",
-            query: values,
-        });
+        console.log(values);
+
+        if (
+            values.firstName &&
+            values.lastName &&
+            values.email &&
+            values.address &&
+            values.city
+        ) {
+            router.push({
+                pathname: "/success",
+                query: values,
+            });
+        } else {
+            setError(true);
+        }
+        // router.push({
+        //     pathname: "/success",
+        //     query: values,
+        // });
     };
 
     return (
@@ -28,7 +51,8 @@ export default function CheckoutForm() {
                                 className="mt-4 mb-2 font-bold text-gray-700"
                                 htmlFor="firstName"
                             >
-                                First Name
+                                First Name{" "}
+                                <span className="text-red-500">*</span>
                             </label>
                             <Field
                                 className="borderbg-white mt-2 w-full rounded-md px-4 py-2 text-gray-500"
@@ -43,7 +67,8 @@ export default function CheckoutForm() {
                                 className="mt-4 mb-2 font-bold text-gray-700"
                                 htmlFor="lastName"
                             >
-                                Last Name
+                                Last Name{" "}
+                                <span className="text-red-500">*</span>
                             </label>
                             <Field
                                 className="borderbg-white mt-2 w-full rounded-md px-4 py-2 text-gray-500"
@@ -58,20 +83,20 @@ export default function CheckoutForm() {
                         className="mt-4 mb-2 font-bold text-gray-700"
                         htmlFor="email"
                     >
-                        Email
+                        Email <span className="text-red-500">*</span>
                     </label>
                     <Field
                         className="borderbg-white w-full rounded-md px-4 py-2 text-gray-500"
                         id="email"
                         name="email"
-                        placeholder="me@onlyme.com"
+                        placeholder="me@gmail.com"
                         type="email"
                     />
                     <label
                         className="mt-4 mb-2 font-bold text-gray-700"
                         htmlFor="address"
                     >
-                        Address
+                        Address <span className="text-red-500">*</span>
                     </label>
                     <Field
                         className="borderbg-white w-full rounded-md px-4 py-2 text-gray-500"
@@ -83,7 +108,7 @@ export default function CheckoutForm() {
                         className="mt-4 mb-2 font-bold text-gray-700"
                         htmlFor="city"
                     >
-                        City
+                        City <span className="text-red-500">*</span>
                     </label>
                     <Field
                         className="borderbg-white w-full rounded-md px-4 py-2 text-gray-500"
@@ -100,6 +125,9 @@ export default function CheckoutForm() {
                     </button>
                 </Form>
             </Formik>
+            {error && (
+                <p className="text-red-500">Complete los campos vacios</p>
+            )}
         </>
     );
 }
