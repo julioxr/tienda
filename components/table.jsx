@@ -1,9 +1,4 @@
 export default function Table({ item }) {
-    const uno =
-        "mb-14 mt-16 flex justify-start self-start overflow-x-auto px-4 sm:px-0  md:self-auto";
-
-    const dos = "w-[1000px] min-w-[600px] text-left text-sm text-gray-500";
-
     return (
         <div className="min-w-[400px] self-start overflow-x-auto lg:self-auto">
             <table className="mx-8 my-16 w-full text-left text-sm text-gray-500 sm:mx-0 lg:w-[1000px] ">
@@ -18,18 +13,16 @@ export default function Table({ item }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {item.info.map((item) => {
+                    {item.info.map((info) => {
                         return (
-                            <>
-                                <tr className="border-b">
-                                    <th className="whitespace-nowrap bg-white py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
-                                        {item.header}
-                                    </th>
-                                    <td className="bg-white py-4 px-2 sm:w-auto sm:px-6">
-                                        {item.description}
-                                    </td>
-                                </tr>
-                            </>
+                            <tr className="border-b" key={info.description}>
+                                <th className="whitespace-nowrap bg-white py-4 px-2 font-medium text-gray-900 sm:static sm:px-6">
+                                    {info.header}
+                                </th>
+                                <td className="bg-white py-4 px-2 sm:w-auto sm:px-6">
+                                    {info.description}
+                                </td>
+                            </tr>
                         );
                     })}
                 </tbody>

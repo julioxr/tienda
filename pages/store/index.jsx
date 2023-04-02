@@ -46,10 +46,9 @@ export default function Index({ items }) {
                         <Select
                             isClearable
                             options={options}
-                            className={{
-                                control: (state) => "min-w-50 sm:min-w-70",
-                            }}
+                            classNamePrefix="my-select"
                             placeholder="Filter by category"
+                            className="w-64"
                             onChange={filterByCategory}
                             instanceId
                             value={selectedOption}
