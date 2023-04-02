@@ -1,14 +1,14 @@
 export default function Table({ item }) {
     return (
-        <div className="min-w-[400px] self-start overflow-x-auto lg:self-auto">
+        <div className="min-w-[400px] self-start overflow-x-auto md:min-w-full lg:min-w-max lg:self-auto">
             <table className="mx-8 my-16 w-full text-left text-sm text-gray-500 sm:mx-0 lg:w-[1000px] ">
                 <thead className="bg-gray-200 text-xs uppercase text-gray-700">
                     <tr>
                         <th className="bg-gray-200 py-3 px-2 sm:static sm:px-6">
-                            Caracteristicas
+                            Feature
                         </th>
                         <th className=" py-3 px-2  sm:w-auto sm:px-6">
-                            Descripcion
+                            Description
                         </th>
                     </tr>
                 </thead>

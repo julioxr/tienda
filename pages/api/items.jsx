@@ -3,87 +3,86 @@ export function getItemsApi() {
         {
             id: 1,
             title: "Blue microphone",
-            price: 3200,
+            price: 830,
             image: "/img/1.jpg",
             type: "audio",
             descripcion:
                 "Professional microphone with high sensitivity and sound quality for recording and live streaming.",
             info: [
                 {
-                    header: "Sensor",
+                    header: "Microphone type",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "Large diaphragm condenser microphone known for sensitivity and high quality.",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Pickup patterns",
+                    description:
+                        "Four selectable patterns: cardioid, bidirectional, omnidirectional, and stereo.",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Frequency response",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "Captures wide range of frequencies, from 20Hz to 20kHz.",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Sensitivity",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "-36dBV/Pa sensitivity, suitable for recording quiet sounds like whispers.",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Impedance",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "16 ohm impedance for easy interfacing with audio equipment.",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Connectio",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Connects to computer via USB, has 3.5mm headphone output.",
                 },
             ],
         },
         {
             id: 2,
             title: "Sony Headphones",
-            price: 12350,
+            price: 420,
             image: "/img/2.jpg",
             type: "audio",
             descripcion:
                 "Sony headphones with noise-canceling technology and exceptional sound quality for an immersive audio experience.",
             info: [
                 {
-                    header: "Sensor",
-                    description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                    header: "Headphone type",
+                    description: "Closed-back circumaural headphones",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Frequency response",
+                    description: "5Hz - 40kHz for accurate sound reproduction",
                 },
                 {
-                    header: "Enfoque automático",
-                    description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                    header: "Sensitivity",
+                    description: "100 dB/mW for powerful audio",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Impedance",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "46 ohms for compatibility with a variety of devices",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Noise cancellation",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Digital noise cancellation technology for an immersive listening experience",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Connection",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "1.2m cable with 3.5mm audio jack for easy connectivity",
                 },
             ],
         },
         {
             id: 3,
             title: "Canon lens",
-            price: 18120,
+            price: 890,
             image: "/img/3.jpg",
             type: "photography",
             descripcion:
@@ -92,317 +91,323 @@ export function getItemsApi() {
                 {
                     header: "Sensor",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "Full-frame 22.3 megapixel CMOS sensor with DIGIC 5+ image processor",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "ISO range",
+                    description: "100 - 25600 (expandable to 50 - 102400)",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Autofocus",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "61-point autofocus system with 41 cross-type points",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Video recording",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "Full HD 1080p video recording with manual control and HDMI output",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Shooting speed",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Continuous shooting speed of up to 6 frames per second",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Display",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "3.2-inch LCD screen with 1,040,000 pixel resolution and anti-reflective coating",
                 },
             ],
         },
         {
             id: 4,
             title: "Watch Casio",
-            price: 47950,
+            price: 130,
             image: "/img/4.jpg",
             type: "objects",
             descripcion:
                 "Casio watch with stylish design and features such as stopwatch, alarm, and water resistance for daily and sports use.",
             info: [
                 {
-                    header: "Sensor",
+                    header: "Style",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "Digital sports watch with resin band and case",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Water Resistance",
+                    description:
+                        "Water-resistant up to 100 meters for swimming and diving",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Features",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "Stopwatch, countdown timer, alarm, and world time function",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Display",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "Large easy-to-read digital display with LED backlight",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Battery Life",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Long-lasting battery with up to 10 years of operation",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Durability",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Shock-resistant construction for rugged outdoor activities",
                 },
             ],
         },
         {
             id: 5,
             title: "Xiaomi red dot",
-            price: 2530,
+            price: 80,
             image: "/img/5.jpg",
             type: "audio",
             descripcion:
                 "Xiaomi wireless earbuds with stable Bluetooth connection, intuitive touch control, and high-fidelity sound for enjoying music anywhere.",
             info: [
                 {
-                    header: "Sensor",
+                    header: "Style",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "Lightweight and slim smartwatch with interchangeable straps",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Display",
+                    description:
+                        "1.4 inch full touch screen display with high resolution and adjustable brightness",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Water Resistance",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "Water-resistant up to 50 meters for swimming and diving",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Features",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "Heart rate monitor, sleep tracker, fitness tracking, and multiple sports modes",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Battery Life",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Long-lasting battery with up to 12 days of operation on a single charge",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Connectivity",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Bluetooth 5.0 connectivity for seamless connection to your smartphone",
                 },
             ],
         },
         {
             id: 6,
             title: "Wallet",
-            price: 2500,
+            price: 110,
             image: "/img/6.jpg",
             type: "objects",
             descripcion:
                 "Leather wallet with multiple compartments for cards and bills, stylish design, and durability for daily use.",
             info: [
                 {
-                    header: "Sensor",
+                    header: "Material",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "Genuine leather wallet with smooth texture and soft feel",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Capacity",
+                    description:
+                        "Slim and compact design with multiple card slots, bill compartments, and coin pocket",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Security",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "RFID blocking technology to protect your credit card information from theft",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Durability",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "High-quality stitching and strong hardware for long-lasting use",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Style",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Elegant and classic design suitable for both formal and casual occasions",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Brand",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Well-known brand with a reputation for producing high-quality leather goods",
                 },
             ],
         },
         {
             id: 7,
-            title: "Ligther",
-            price: 2500,
+            title: "Lighter",
+            price: 55,
             image: "/img/7.jpg",
             type: "objects",
             descripcion:
-                "High-quality rechargeable lighter with stylish design, adjustable flame, and reliability for long-lasting use.",
+                "Leather wallet with multiple compartments for cards and bills, stylish design, and durability for daily use.",
             info: [
                 {
-                    header: "Sensor",
+                    header: "Ignition",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "Easy-to-use ignition system for quick and reliable lighting",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Fuel",
+                    description:
+                        "Refillable with butane or lighter fluid for extended use",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Flame",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "Adjustable flame for customized intensity and precision",
                 },
                 {
-                    header: "Grabación de video",
-                    description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                    header: "Design",
+                    description: "Sleek and stylish design for a modern look",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Portability",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Compact and lightweight for easy carrying in pockets or bags",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Safety",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Child-resistant mechanism and wind-resistant flame for safe use",
                 },
             ],
         },
         {
             id: 8,
             title: "Notebook",
-            price: 2500,
+            price: 36,
             image: "/img/8.jpg",
             type: "objects",
             descripcion:
                 "Notebook with high-quality paper, durable cover, and convenient size for daily use and creative inspiration.",
             info: [
                 {
-                    header: "Sensor",
+                    header: "Display",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "15.6 inch full HD display with anti-glare coating for comfortable viewing",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Performance",
+                    description:
+                        "Fast and efficient processing with the latest Intel Core i5 processor and 8GB RAM",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Storage",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "Large 512GB solid-state drive for fast boot-up and data access",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Connectivity",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "Multiple connectivity options including Wi-Fi 6, Bluetooth, and USB-C",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Battery Life",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Long-lasting battery with up to 10 hours of use on a single charge",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Design",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Sleek and stylish design with a durable aluminum body and slim profile",
                 },
             ],
         },
         {
             id: 9,
             title: "Luxury cup",
-            price: 2500,
+            price: 28,
             image: "/img/9.jpg",
             type: "objects",
             descripcion:
                 "High-quality ceramic mug with ergonomic handle and vibrant design for a cozy and stylish drinking experience.",
             info: [
                 {
-                    header: "Sensor",
+                    header: "Quality",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "Premium quality tea or coffee sourced from the finest plantations and estates",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Flavor Profile",
+                    description:
+                        "Delicious and complex flavors with rich notes and delicate aromas",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Packaging",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "Elegant and luxurious packaging with attention to detail and high-quality materials",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Serving Style",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "Served in a fine bone china cup or a handcrafted ceramic mug for an elevated experience",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Origin",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Expertly sourced and selected from the best regions of the world for the ultimate taste and aroma",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Sustainability",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Sustainably and ethically sourced with a focus on supporting local communities and preserving the environment",
                 },
             ],
         },
         {
             id: 10,
             title: "Red drone",
-            price: 2500,
+            price: 1100,
             image: "/img/10.jpg",
             type: "drones",
             descripcion:
                 "Red drone with advanced camera technology, long battery life, and stable flight control for capturing stunning aerial footage.",
             info: [
                 {
-                    header: "Sensor",
+                    header: "Camera",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "High-resolution camera with stabilized gimbal for smooth and clear aerial footage",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Flight Time",
+                    description:
+                        "Extended flight time of up to 30 minutes with intelligent battery management system",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Range",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "Long range control of up to 4.3 miles for expanded flight options and versatility",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Obstacle Avoidance",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "Intelligent obstacle avoidance system with 3-directional sensing for safer and more reliable flights",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Flight Modes",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Multiple intelligent flight modes for capturing cinematic shots, including ActiveTrack, TapFly, and QuickShots",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Portability",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Compact and foldable design for easy portability and transport",
                 },
             ],
         },
         {
             id: 11,
-            title: "Picks Rombo",
+            title: "26",
             price: 2500,
             image: "/img/11.jpg",
             type: "instruments",
@@ -410,40 +415,41 @@ export function getItemsApi() {
                 "Guitar picks with premium materials and various thicknesses for optimal tone and precision during playing sessions.",
             info: [
                 {
-                    header: "Sensor",
+                    header: "Material",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "Made from high-quality materials such as celluloid, nylon, or Delrin for durability and tone",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
+                    header: "Thickness",
+                    description:
+                        "Available in various thicknesses to achieve different tonal and playing preferences",
                 },
                 {
-                    header: "Enfoque automático",
+                    header: "Shape",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "Comes in a variety of shapes such as standard, jazz, or triangle for varied attack and control",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Grip",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "Textured or contoured grip for enhanced comfort and control during play",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Design",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "Unique and eye-catching designs for added style and personality",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Versatility",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Suitable for use with acoustic, electric, and bass guitars, as well as other stringed instruments",
                 },
             ],
         },
         {
             id: 12,
             title: "Canon Mark iii",
-            price: 2500,
+            price: 2300,
             image: "/img/12.jpg",
             type: "photography",
             descripcion:
@@ -452,31 +458,32 @@ export function getItemsApi() {
                 {
                     header: "Sensor",
                     description:
-                        "Sensor CMOS de fotograma completo de 22,3 megapíxeles con procesador de imagen DIGIC 5+",
+                        "Full-frame 22.3 Megapixel CMOS sensor for high-resolution and detail-rich images",
                 },
                 {
-                    header: "Rango de ISO",
-                    description: "100 - 25600 (ampliable a 50 - 102400)",
-                },
-                {
-                    header: "Enfoque automático",
+                    header: "Processor",
                     description:
-                        "Sistema de enfoque automático de 61 puntos con 41 puntos tipo cruz",
+                        "DIGIC 5+ Image Processor for fast performance and exceptional image quality",
                 },
                 {
-                    header: "Grabación de video",
+                    header: "Auto Focus",
                     description:
-                        "Grabación de video Full HD a 1080p con control manual y salida HDMI",
+                        "61-point High Density Reticular AF system with 41 cross-type AF points for accurate and precise focusing",
                 },
                 {
-                    header: "Velocidad de disparo",
+                    header: "Low Light Performance",
                     description:
-                        "Velocidad de disparo continuo de hasta 6 fotogramas por segundo",
+                        "ISO range of 100-25600 (expandable to 50-102400) for low light shooting",
                 },
                 {
-                    header: "Pantalla",
+                    header: "Video Recording",
                     description:
-                        "Pantalla LCD de 3,2 pulgadas con resolución de 1.040.000 píxeles y revestimiento antirreflejos",
+                        "Full HD video recording (1080p) with manual control and HDMI output",
+                },
+                {
+                    header: "Display",
+                    description:
+                        "3.2-inch LCD screen with 1,040,000 dots resolution for clear and sharp image playback",
                 },
             ],
         },
