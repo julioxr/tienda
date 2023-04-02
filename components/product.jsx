@@ -55,7 +55,7 @@ export default function Product({ item, showAs }) {
                 <div className="flex flex-col items-center justify-center overflow-x-hidden">
                     {" "}
                     {/* Card and description */}
-                    <div className="mx-8 flex max-w-[500px] flex-col items-center justify-center gap-x-12 rounded-md bg-white shadow-xl sm:mx-auto md:w-[752px] md:max-w-none md:flex-row lg:w-[1000px]">
+                    <div className="relative mx-8 flex max-w-[500px] flex-col items-center justify-center gap-x-12 overflow-y-hidden rounded-md bg-white shadow-xl sm:mx-auto md:w-[752px] md:max-w-none md:flex-row lg:w-[1000px]">
                         <div className="p-4">
                             <Image
                                 src={item.image}
@@ -79,12 +79,16 @@ export default function Product({ item, showAs }) {
                                 {item.descripcion}
                             </div>
                             <div className="mt-4 mb-2 self-center md:self-start lg:mb-0 lg:mt-8">
-                                <CartButton item={item} setAdded={setAdded} />
+                                <CartButton
+                                    item={item}
+                                    setAdded={setAdded}
+                                    setShowToast={setShowToast}
+                                />
                             </div>
                         </div>
-                        {added && <Toast />}
-                        {/* Table with data */}
+                        <Toast showToast={showToast} />
                     </div>
+                    {/* Table with data */}
                     <Table item={item} />
                     {/* Aca probar agregar minicards */}
                     {/* <div className="flex gap-8 justify-center p-14 items-center">
@@ -254,13 +258,12 @@ export default function Product({ item, showAs }) {
                     />
                 </div>
                 <Toast showToast={showToast} />
-                {/* {added && <Toast showToast={showToast} />} */}
             </div>
         );
     }
 
     return (
-        <div className="flex w-80 flex-col items-center justify-around gap-2 rounded-md bg-white p-4 text-center shadow-xl">
+        <div className="relative flex w-80 flex-col items-center justify-around gap-2 overflow-y-hidden rounded-md bg-white p-4 text-center shadow-xl">
             <div>
                 <Link href={`/store/${convertToPath(item.title)}`}>
                     <Image
@@ -283,9 +286,13 @@ export default function Product({ item, showAs }) {
                 ${price}
             </div>
             <div className="mb-3">
-                <CartButton item={item} setAdded={setAdded} />
+                <CartButton
+                    item={item}
+                    setAdded={setAdded}
+                    setShowToast={setShowToast}
+                />
             </div>
-            {added && <Toast />}
+            <Toast showToast={showToast} />
         </div>
     );
 }
