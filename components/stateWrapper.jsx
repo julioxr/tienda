@@ -13,6 +13,7 @@ const AppContext = createContext({
 export default function StateWrapper({ children }) {
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [access, setAccess] = useState(false);
     const [items, setItems] = useState([]);
 
     const handleOpenCart = () => {
@@ -93,6 +94,8 @@ export default function StateWrapper({ children }) {
                 handleCloseMenu,
                 getTotal,
                 clearCart,
+                access,
+                setAccess,
             }}
         >
             {children}

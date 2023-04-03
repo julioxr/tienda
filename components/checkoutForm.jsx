@@ -1,37 +1,45 @@
 import { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { useRouter } from "next/router";
+import { useAppContext } from "@/components/stateWrapper";
 
 export default function CheckoutForm() {
     const router = useRouter();
+    const { setAccess } = useAppContext();
     const [error, setError] = useState(false);
-    const [access, setAccess] = useState(false);
 
-    // aca tengo que tener un estado que valie la isguiente pantalla
+    const [firstNameEmpty, setFirstNameEmpty] = useState(false);
+    const [lastNameEmpty, setLastNameEmpty] = useState(false);
+    const [emailEmpty, setEmailEmpty] = useState(false);
+    const [addressEmpty, setAddressEmpty] = useState(false);
+    const [cityEmpty, setCityEmpty] = useState(false);
 
-    const handleInputs = (e) => {};
+    const handleAccess = (e) => {
+        setAccess(true);
+    };
 
     const handleSubmit = (values) => {
-        console.log(values);
+        setFirstNameEmpty(values.firstName === "");
+        setLastNameEmpty(values.lastName === "");
+        setEmailEmpty(values.email === "");
+        setAddressEmpty(values.address === "");
+        setCityEmpty(values.city === "");
 
         if (
-            values.firstName &&
-            values.lastName &&
-            values.email &&
-            values.address &&
-            values.city
+            values.firstName === "" ||
+            values.lastName === "" ||
+            values.email === "" ||
+            values.address === "" ||
+            values.city === ""
         ) {
+            setError(true);
+        } else {
+            handleAccess();
             router.push({
                 pathname: "/success",
                 query: values,
             });
-        } else {
-            setError(true);
         }
-        // router.push({
-        //     pathname: "/success",
-        //     query: values,
-        // });
     };
 
     return (
@@ -41,6 +49,8 @@ export default function CheckoutForm() {
                     firstName: "",
                     lastName: "",
                     email: "",
+                    address: "",
+                    city: "",
                 }}
                 onSubmit={handleSubmit}
             >
@@ -55,10 +65,17 @@ export default function CheckoutForm() {
                                 <span className="text-red-500">*</span>
                             </label>
                             <Field
-                                className="borderbg-white mt-2 w-full rounded-md px-4 py-2 text-gray-500"
+                                className={`borderbg-white mt-2 w-full rounded-md px-4 py-2 text-gray-500 ${
+                                    firstNameEmpty
+                                        ? "border border-red-500"
+                                        : ""
+                                }`}
                                 id="firstName"
                                 name="firstName"
                                 placeholder="Jhon"
+                                onBlur={(e) => {
+                                    setFirstNameEmpty(e.target.value === "");
+                                }}
                             />
                         </div>
 
@@ -71,10 +88,15 @@ export default function CheckoutForm() {
                                 <span className="text-red-500">*</span>
                             </label>
                             <Field
-                                className="borderbg-white mt-2 w-full rounded-md px-4 py-2 text-gray-500"
+                                className={`borderbg-white mt-2 w-full rounded-md px-4 py-2 text-gray-500 ${
+                                    lastNameEmpty ? "border border-red-500" : ""
+                                }`}
                                 id="lastName"
                                 name="lastName"
                                 placeholder="Doe"
+                                onBlur={(e) => {
+                                    setLastNameEmpty(e.target.value === "");
+                                }}
                             />
                         </div>
                     </div>
@@ -86,11 +108,16 @@ export default function CheckoutForm() {
                         Email <span className="text-red-500">*</span>
                     </label>
                     <Field
-                        className="borderbg-white w-full rounded-md px-4 py-2 text-gray-500"
+                        className={`borderbg-white w-full rounded-md px-4 py-2 text-gray-500 ${
+                            emailEmpty ? "border border-red-500" : ""
+                        }`}
                         id="email"
                         name="email"
                         placeholder="me@gmail.com"
                         type="email"
+                        onBlur={(e) => {
+                            setEmailEmpty(e.target.value === "");
+                        }}
                     />
                     <label
                         className="mt-4 mb-2 font-bold text-gray-700"
@@ -99,10 +126,15 @@ export default function CheckoutForm() {
                         Address <span className="text-red-500">*</span>
                     </label>
                     <Field
-                        className="borderbg-white w-full rounded-md px-4 py-2 text-gray-500"
+                        className={`borderbg-white w-full rounded-md px-4 py-2 text-gray-500 ${
+                            addressEmpty ? "border border-red-500" : ""
+                        }`}
                         id="address"
                         name="address"
                         placeholder="Av. Siempreviva 742"
+                        onBlur={(e) => {
+                            setAddressEmpty(e.target.value === "");
+                        }}
                     />
                     <label
                         className="mt-4 mb-2 font-bold text-gray-700"
@@ -111,10 +143,15 @@ export default function CheckoutForm() {
                         City <span className="text-red-500">*</span>
                     </label>
                     <Field
-                        className="borderbg-white w-full rounded-md px-4 py-2 text-gray-500"
+                        className={`borderbg-white w-full rounded-md px-4 py-2 text-gray-500 ${
+                            cityEmpty ? "border border-red-500" : ""
+                        }`}
                         id="city"
                         name="city"
                         placeholder="Springfield"
+                        onBlur={(e) => {
+                            setCityEmpty(e.target.value === "");
+                        }}
                     />
 
                     <button
@@ -126,7 +163,9 @@ export default function CheckoutForm() {
                 </Form>
             </Formik>
             {error && (
-                <p className="text-red-500">Complete los campos vacios</p>
+                <p className="mx-8 -mt-2 text-red-500">
+                    * Complete los campos vacios
+                </p>
             )}
         </>
     );
